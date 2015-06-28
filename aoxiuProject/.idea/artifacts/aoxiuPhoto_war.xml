@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="aoxiuPhoto:war">
+    <output-path>$PROJECT_DIR$/aoxiuPhoto/target</output-path>
+    <root id="archive" name="aoxiuPhoto.war">
+      <element id="artifact" artifact-name="aoxiuPhoto:war exploded" />
+    </root>
+  </artifact>
+</component>

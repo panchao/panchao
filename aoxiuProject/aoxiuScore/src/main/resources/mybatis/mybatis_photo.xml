@@ -1,0 +1,111 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <mapper namespace="photo">
+    <resultMap id="photoMap" type="com.aoxiu.meta.photo.Photo">
+        <result column="photo_id" property="photoId" jdbcType="INTEGER"/>
+        <result column="photo_content_id" property="photoContentId" jdbcType="INTEGER"/>
+        <result column="photo_type" property="photoType" jdbcType="INTEGER"/>
+        <result column="photo_name_old" property="photoNameOld" jdbcType="VARCHAR"/>
+        <result column="photo_name_new" property="photoNameNew" jdbcType="VARCHAR"/>
+        <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="photo_src" property="photoSrc" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="getPhotoById" parameterType="java.util.Map">
+        SELECT * FROM aoxiu_photo WHERE photo_id = #{photoId,jdbcType=INTEGER}
+    </select>
+    <select id="getPhotosContentId" parameterType="java.util.Map" resultMap="photoMap">
+        SELECT * FROM aoxiu_photo WHERE photo_content_id = #{contentId,jdbcType=INTEGER}
+    </select>
+    <insert id="insertPhoto" parameterType="java.util.Map"  useGeneratedKeys="true" keyProperty="photoId">
+        INSERT INTO aoxiu_photo (photo_content_id,photo_type,photo_name_old,photo_name_new,create_time,photo_src)
+        SELECT
+        #{photoContentId,jdbcType=INTEGER},
+        #{photoType,jdbcType=INTEGER},
+        #{photoNameOld,jdbcType=VARCHAR},
+        #{photoNameNew,jdbcType=VARCHAR},
+        #{createTime,jdbcType=TIMESTAMP},
+        #{photoSrc,jdbcType=VARCHAR}
+        FROM dual
+    </insert>
+    <insert id="insertPhotoBatches" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="photoId">
+        INSERT INTO aoxiu_photo
+        (photo_content_id,photo_type,photo_name_old,photo_name_new,create_time,photo_src)
+        <foreach collection="list" item="item" index="index"
+                 separator="union all">
+            select
+            #{item.photoContentId, jdbcType=INTEGER},
+            #{item.photoType, jdbcType=INTEGER},
+            #{item.photoNameOld, jdbcType=VARCHAR},
+            #{item.photoNameNew, jdbcType=VARCHAR},
+            #{item.createTime,jdbcType=TIMESTAMP},
+            #{photoSrc,jdbcType=VARCHAR}
+            from dual
+        </foreach>
+    </insert>
+    <select id="getPhotosByPhotoId" parameterType="java.util.Map" resultMap="photoMap">
+        SELECT  * FROM  aoxiu_photo WHERE photo_id = #{photoId,jdbcType=INTEGER}
+    </select>
+
+    <delete id="deletePhotos" parameterType="java.util.List">
+        DELETE FROM aoxiu_photo WHERE photo_id IN
+        <foreach collection="list" item = "item" index="index" open="(" separator="," close=")">
+        #{item,jdbcType=INTEGER}
+        </foreach>
+    </delete>
+
+    <update id="updatePictures" parameterType="java.util.List">
+        <foreach collection="list" item="item" index="index" open="" close="" separator=";">
+            UPDATE aoxiu_photo
+            <set>
+                <if test="item.photoNameNew != null">
+                    photo_name_new = #{item.photoNameNew,jdbcType=VARCHAR},
+                </if>
+                <if test="item.photoType != null">
+                    photo_type = #{item.photoType,jdbcType=VARCHAR}
+                </if>
+            </set>
+            WHERE photo_id=#{item.photoId,jdbcType=INTEGER}
+
+        </foreach>
+    </update>
+
+    <select id="getSelectedPhotos" parameterType="java.util.List" resultMap="photoMap">
+        SELECT * FROM aoxiu_photo WHERE  photo_type = 1 and photo_content_id in
+        <foreach collection="list" item="item" index="index" open="(" close=")" separator=",">
+            #{item,jdbcType=INTEGER}
+                </foreach>
+        ORDER by create_time DESC
+    </select>
+
+
+    <select id="getSelectedPhoto" parameterType="java.util.Map" resultMap="photoMap">
+      SELECT * FROM aoxiu_photo WHERE photo_content_id = #{contentId} AND photo_type = 2
+    </select>
+
+    <select id="getSelectedPhotosByCond" parameterType="java.util.Map" resultMap="photoMap">
+              SELECT * FROM aoxiu_photo WHERE photo_content_id = #{contentId} AND photo_type = 2
+    </select>
+
+    <select id="getSelectedPhotosBatches" parameterType="java.util.List" resultMap="photoMap">
+        SELECT * FROM aoxiu_photo WHERE photo_type = 2 and photo_content_id IN
+        <foreach item="item" index="index" collection="list"
+                 open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+
+    <select id="getSelectedPhotosNames" parameterType="java.util.List" resultType="java.lang.String">
+        SELECT photo_name_old FROM aoxiu_photo  WHERE photo_type =2 AND  photo_content_id IN
+        <foreach item="item" index="index" collection="list"
+                 open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+    <select id="getUnSelectPhotosBatches" parameterType="java.util.List" resultMap="photoMap">
+        SELECT * FROM aoxiu_photo WHERE photo_type = 1 and photo_content_id IN
+        <foreach item="item" index="index" collection="list"
+                 open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+</mapper>

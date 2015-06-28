@@ -1,0 +1,17 @@
+<ol class="breadcrumb">
+
+<% var dirs = dirs || []; %>
+<% var len = dirs.length; %>
+
+<% for(var i = 0; i < len; ++i) { %>
+    <% dir = dirs[i]; %>
+
+    <% if (i === len -1) {  %>
+      <li class="active" data-url="<%= dir.url %>"><%= dir.text %></li>
+      <% break; %>
+    <% } %>
+    
+    <li><a href="<%= dir.url %>"><%= dir.text %></a></li>
+
+<% } %>
+</ol>

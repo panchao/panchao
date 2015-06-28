@@ -1,0 +1,13 @@
+<% for(var i = 0; i < data.length; ++i) { %>
+  <% var order = data[i]; %>
+  <tr data-customer='{"id": <%= order.customerId %>}'>
+    <td><%= order.orderId %></td>
+    <td><%= order.customerName %></td>
+    <td><%= order.customerId %></td>
+    <td><%= order.watermarkType %></td>
+    <td><%= order.maxSelectCount %></td>
+    <td><%= order.extraPricePerPhoto %></td>
+    <td><%= order.status %></td>
+    <td><%= order.createTime %></td>
+  </tr>
+<% } %>

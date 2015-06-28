@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd
+            http://www.springframework.org/schema/aop
+            http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+            http://www.springframework.org/schema/tx
+            http://www.springframework.org/schema/tx/spring-tx.xsd
+            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+
+
+    <!-- 引入jdbc配置文件 -->
+    <context:property-placeholder location="classpath:config/jdbc.properties"/>
+
+    <!-- 定义aspectj -->
+    <aop:aspectj-autoproxy proxy-target-class="true" expose-proxy="true"/>
+    <context:annotation-config/>
+
+    <!--DAO-->
+    <bean id="photographersDao" class="com.aoxiu.dao.photo.impl.PhotographersDaoImpl"/>
+    <bean id="companyDao" class="com.aoxiu.dao.photo.impl.CompanyDaoImpl"/>
+    <bean id="userCompanyDao" class="com.aoxiu.dao.photo.impl.UserCompanyDaoImpl"/>
+    <bean id="customerDao" class="com.aoxiu.dao.photo.impl.CustomerDaoImpl"/>
+    <bean id="photographerOrderDao" class="com.aoxiu.dao.photo.impl.PhotographerOrderDaoImpl"/>
+    <bean id="photoContentDao" class="com.aoxiu.dao.photo.impl.PhotoContentDaoImpl"/>
+    <bean id="photoDao" class="com.aoxiu.dao.photo.impl.PhotoDaoImpl"/>
+    <bean id="albumDao" class="com.aoxiu.dao.photo.impl.AlbumDaoImpl"/>
+    <bean id="appraisalDao" class="com.aoxiu.dao.photo.impl.AppraisalDaoImpl"/>
+    <bean id="qrCodeDao" class="com.aoxiu.dao.photo.impl.QrCodeDaoImpl"/>
+    <bean id="albumOrderDao" class="com.aoxiu.dao.photo.impl.AlbumOrderDaoImpl"/>
+    <!--DAO END-->
+    <!--SERVICE-->
+    <bean id="loginService" class="com.aoxiu.service.photo.impl.LoginServiceImpl"/>
+    <bean id="registerUserServiceImpl" class="com.aoxiu.service.photo.impl.RegisterUserServiceImpl"/>
+    <bean id="queryUserInfoService" class="com.aoxiu.service.photo.impl.QueryUserInfoServiceImpl"/>
+    <bean id="companyOperatorService" class="com.aoxiu.service.photo.impl.CompanyOperatorServiceImpl"/>
+    <bean id="customerService" class="com.aoxiu.service.photo.impl.CustomerServiceImpl"/>
+    <bean id="orderService" class="com.aoxiu.service.photo.impl.OrderServiceImpl"/>
+    <bean id="photographerOrderService" class="com.aoxiu.service.photo.impl.PhotographerOrderServiceImpl"/>
+    <bean id="albumService" class="com.aoxiu.service.photo.impl.AlbumServiceImpl"/>
+    <bean id="appraisalService" class="com.aoxiu.service.photo.impl.AppraisalServiceImpl"/>
+    <bean id="PhotoService" class="com.aoxiu.service.photo.impl.PhotoServiceImpl"/>
+    <!--SERVICE END-->
+
+    <!--<context:component-scan base-package="com.aoxiu.dao.photo" use-default-filters="false">-->
+        <!--<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
+    <!--</context:component-scan>-->
+
+    <!--<context:component-scan base-package="com.aoxiu.service.photo" use-default-filters="false">-->
+        <!--<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
+    <!--</context:component-scan>-->
+
+    <bean id="paginationInterceptorMysql" class="com.aoxiu.common.PaginationInterceptor">
+        <property name="dialect">
+            <bean class="com.aoxiu.common.dialect.MySQLDialect" />
+        </property>
+        <property name="paginationSqlRegEx" value=".*ByCond"></property>
+    </bean>
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://115.159.94.85:3306/xuanpianer?allowMultiQueries=true"/>
+        <property name="username" value="xuanpianer"/>
+        <property name="password" value="xuanpianer"/>
+        <property name="initialSize" value="10"/>
+        <property name="maxActive" value="20"/>
+        <property name="maxIdle" value="10"/>
+        <property name="minIdle" value="5"/>
+    </bean>
+
+    <!-- 事务管理器配置,单数据源事务 -->
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- 使用annotation定义事务 -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml"/>
+        <property name="dataSource" ref="dataSource"/>
+        <property name="plugins">
+            <array>
+                <ref bean="paginationInterceptorMysql"/>
+            </array>
+        </property>
+    </bean>
+
+
+    <util:list id="filterUrls" list-class="java.util.ArrayList">
+        <value>/web/interfaces/company</value>
+       <value>/web/interfaces/query</value>
+        <value>/web/interfaces/getOrder.do</value>
+        <value>/web/interfaces/users/gotoPhotographerHome.do</value>
+        <value>/web/interfaces/getPhotographerUsers</value>
+        <value>/web/interfaces/users/gotoPhotoNewOrder.do</value>
+        <value>/web/interfaces/pictures/getPhotographerUsers</value>
+    </util:list>
+</beans>

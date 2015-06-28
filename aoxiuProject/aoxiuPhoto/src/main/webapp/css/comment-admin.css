@@ -1,0 +1,10 @@
+.filter {
+  margin: 0 0 10px 0;
+}
+.filter-item {
+  white-space: nowrap;
+  padding-left: 0;
+}
+.btn-search {
+  margin-left: 10px;
+}

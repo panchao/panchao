@@ -1,0 +1,18 @@
+.row-order {
+  padding: 10px 0;
+  border-bottom: 1px solid #bbb;
+}
+.row-order .btn {
+  margin-left: 15px;
+}
+.row-order .row-order-inner {
+  margin: 10px 0;
+}
+
+.row-order-inner a.btn {
+  margin: 1%;
+}
+.row-order-inner img {
+  margin-right: 5%;
+  margin-left: 5%;
+}

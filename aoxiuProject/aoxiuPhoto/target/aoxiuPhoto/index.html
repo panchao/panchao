@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>系统登录</title>
+<link href="css/login.css" rel="stylesheet" />
+<!-- <link href="css/demo.css" rel="stylesheet" /> -->
+
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<!-- <script type="text/javascript" src="js/jquery.SuperSlide.js"></script>  -->
+<script type="text/javascript" src="js/Validform_v5.3.2_min.js"></script>
+</head>
+
+<body>
+<header class="header">
+  <h1 class="headerLogo"><a title="后台管理系统" target="_blank" href="http://www.baidu.com/"><img alt="logo" src="images/logo.gif"></a></h1>
+	<div class="headerNav">
+		<a target="_blank" href="http://www.baidu.com/">傲秀官网</a>
+		<a target="_blank" href="http://www.baidu.com/">关于傲秀</a>
+		<a target="_blank" href="http://www.baidu.com/">团队介绍</a>
+		<a target="_blank" href="http://www.baidu.com/">意见反馈</a>
+		<a target="_blank" href="http://www.baidu.com/">帮助</a>
+	</div>
+</header>
+
+<div class="banner" style="background:url(themes/theme-pic1.jpg) #CCE1F3 center 0 no-repeat;"></div>
+<aside class="panel">
+  <!-- <div id="o-box-up"></div>
+  <div id="o-box-down"  style="table-layout:fixed;"> -->
+
+  <div class="switch" id="switch">
+    <a class="switch-btn switch-btn-focus" hidefocus="true" id="cameraman-login" href="javascript:void(0);" tabindex="7" user-type="cameraman">摄影师<span class="login-text">登陆</span><span class="reg-text">注册</span></a>
+    <a class="switch-btn" hidefocus="true" id="switcher_plogin" href="javascript:void(0);" tabindex="8" user-type="wedding">婚庆<span class="login-text">登陆</span><span class="reg-text">注册</a>
+    <div class="switch_bottom" id="switch_bottom" style="left: 0px; width: 64px;"></div>
+  </div>
+
+   <div class="error-box"></div>
+	<!-- 登陆 -->
+   <form class="form form-login"  method="POST" id="login-form" action="users/login">
+     <div class="fm-item">
+       <label for="username" class="form-label">用户名：</label>
+       <input type="text" placeholder="输入账号" maxlength="100" id="username" name="username" class="i-text" ajaxurl="/web/interfaces/users/valid.do"  datatype="s6-18" errormsg="用户名至少6个字符,最多18个字符！"  >
+    </div>
+    
+    <div class="fm-item">
+       <label for="password" class="form-label">密&nbsp;&nbsp;码：</label>
+       <input type="password" placeholder="输入密码" maxlength="100" id="password" name="password" class="i-text" datatype="*6-16" nullmsg="请设置密码！" errormsg="密码范围在6~16位之间！" />    
+    </div>
+    
+    <div class="fm-item validation-item">
+       <label for="yzm" class="form-label">验证码：</label>
+       <input type="text" placeholder="输入验证码" maxlength="100" id="yzm" name="yzm" class="i-text input-yzm" nullmsg="请输入验证码！" />
+        <img src="images/yzm.jpg" class="yzm-img" />
+    </div>
+    
+    <div class="fm-item">
+       <input class="user-type" type="hidden" name="user-type" value="cameraman" />
+       <input type="submit" value="登录" tabindex="4" id="send-btn" class="btn-submit"> 
+    </div>
+  </form>
+	<!-- 注册 -->
+   <form class="form form-reg" id="registry-form" action="/web/interfaces/users/register.do">
+     <div class="fm-item">
+       <label for="username" class="form-label">用户名：</label>
+       <input type="text" placeholder="输入账号" maxlength="100" name="username" class="i-text" ajaxurl="/validReg.do" datatype="s6-18" errormsg="用户名至少6个字符,最多18个字符！" />
+    </div>
+
+    <div class="fm-item">
+       <label for="password" class="form-label">密&nbsp;&nbsp;码：</label>
+       <input type="password" placeholder="输入密码" maxlength="100" name="password" class="i-text" datatype="*6-16" nullmsg="请设置密码！" errormsg="密码范围在6~16位之间！" />    
+    </div>
+
+	<div class="fm-item">
+       <label for="confirm-password-reg" class="form-label">确认密码：</label>
+       <input type="password" placeholder="再次输入密码" maxlength="100" id="confirm-password-reg" class="i-text" datatype="*6-16" nullmsg="请再次输入密码！" errormsg="密码范围在6~16位之间！" />    
+    </div>
+    
+    <div class="fm-item validation-item">
+       <label for="yzm" class="form-label">验证码：</label>
+       <input type="text" placeholder="输入验证码" maxlength="100" id="yzm-reg" name="yzm" class="i-text input-yzm" nullmsg="请输入验证码！" />
+        <img src="images/yzm.jpg" class="yzm-img" />
+    </div>
+    
+    <div class="fm-item">
+       <input class="user-type" type="hidden" name="user-type" value="cameraman" />
+       <input type="submit" value="注册" tabindex="4" id="send-btn-reg" class="btn-submit"> 
+    </div>
+  </form>
+	
+	<div class="text-center">
+		<a class="tip tip-reg" href="javascript:;">还没有账号？马上注册</a>
+		<a class="tip tip-login" href="javascript:;">已经有账号？马上登陆</a>
+	</div>
+</aside>
+
+<footer class="footer">
+   <p>Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="http://www.baidu.com/">傲秀</a></p>
+</footer>
+
+<script>  
+$(function(){
+  $(".i-text")
+    .focus(function () {
+      $(this).addClass('h-light');
+    })
+    .focusout(function () {
+      $(this).removeClass('h-light');
+    });
+
+  /*$(".username")
+    .focus(function () {
+      var username = $(this).val();
+      if(username == '输入账号') {
+        $(this).val('');
+      }
+    })
+    .focusout(function(){
+       var username = $(this).val();
+       if(username == ''){
+        $(this).val('输入账号');
+       }
+    });
+
+  $(".password").focus(function () {
+    var username = $(this).val();
+    if(username == '输入密码') {
+      $(this).val('');
+    }
+  });
+
+
+  $("#yzm").focus(function() {
+   var username = $(this).val();
+   if(username == '输入验证码'){
+     $(this).val('');
+   }
+  }).focusout(function(){
+   var username = $(this).val();
+   if(username == ''){
+   $(this).val('输入验证码');
+   }
+  });*/
+
+//  $(".form").Validform({
+//    tiptype: function (msg, o, cssctl) {
+//      var objtip = $(".error-box");
+//      cssctl(objtip, o.type);
+//      objtip.text(msg);
+//    },
+//    ajaxPost: true
+//  });
+
+  $('.panel')
+		.on('click', '.switch-btn', function () {
+			$('.switch-btn').removeClass('switch-btn-focus');
+			$('.user-type').val($(this).addClass('switch-btn-focus').attr('user-type'));
+		})
+		.on('click', '.tip', function () {
+			$('.panel').toggleClass('reg-ing');
+		});
+});
+</script>
+</body>
+</html>

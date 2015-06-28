@@ -1,0 +1,215 @@
+
+/*---------------------reset----------------------*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, input{ 
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+ol, ul, li  { list-style: none; } 
+body  { 
+  background: #FFF;
+  font-family: Consolas, "微软雅黑", "宋体"; 
+}
+:focus  { outline: 0; }
+table  { 
+  border-collapse: collapse;
+  border-spacing: 0; 
+}
+table,table td,table th {
+  border: 1px solid #edeada;
+  border-collapse: collapse;
+}
+address, cite, code, dfn, em, var, i  { font-style: normal;  }
+input[type="button"], input[type="submit"], button  { 
+  cursor: pointer;
+  outline: none;
+}
+.input, select  { vertical-align: middle  }
+* html .clearfix  { zoom: 1  }
+*+html .clearfix  { zoom: 1  }
+textarea {resize: none;
+}
+a  { 
+  text-decoration: none;
+  color: #009bd8; 
+}
+.clearfix:after  {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.pos-r { position: relative; }
+.hide { display: none; }
+/*---------------------header----------------------*/
+
+.header { 
+  height: 72px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+  width: 800px;
+  z-index: 2;
+}
+.headerNav  { 
+  right: 0;
+  text-align: right;
+  top: 52px;
+  width: 300px;
+  position: absolute;
+}
+.headerNav a { 
+  color: #515151;
+  font-size: 12px;
+  padding: 0 2px;
+}
+.headerNav a:hover { 
+  text-decoration: underline;
+  color: #658b98;
+}
+
+/*---------------------banner----------------------*/
+.banner { 
+  min-width: 1000px;
+  position: relative;
+  height: 478px;
+  overflow: hidden;
+}
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #999999;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.panel {
+  position: absolute;
+  left: 35%;
+  top: 112px;
+  width: 500px;
+  border-radius: 5px;
+	background-color: rgba(25, 119, 59, 0.69);
+	padding-bottom: 10px;
+}
+
+.form {
+  width: 324px;
+  margin: 20px auto;
+}
+
+.Validform_right {
+	color: rgb(69, 253, 69);
+}
+.switch {
+  /*padding-bottom: 10px;
+  padding-top: 10px;*/
+  text-align: center;
+  border-bottom: 1px solid #A7A7A7;
+  overflow: hidden;
+  border-radius: 5px;
+  padding: 10px;
+}
+/*
+#cameraman-login {
+  display: inline-block;
+  margin-right: 50px;
+  border-right: 1px solid #A7A7A7;
+  padding-right: 60px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}*/
+.switch-btn {
+ /* width: 50%;
+  padding: 13px 0;
+  float: left;*/
+}
+.switch-btn-focus {
+  background-color: #2E90EB;
+}
+
+.switch a {
+  color: #fff;
+}
+
+.fm-item {
+  margin-bottom: 20px;
+	text-align: right;
+}
+.validation-item {
+	position: relative;
+	margin-top: -13px;
+	right: 7px;
+}
+.error-box {
+	color: #f7ccc8;
+	font-size: 12px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: -10px;
+}
+
+
+.form-label  {
+  display: inline-block;
+  float: none;
+  height: auto;
+  line-height: 12px;
+  text-align: left;
+  width: auto;
+	font-size: 14px;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #4e6877;
+	margin-top: 16px;
+	margin-bottom: 16px;
+ }
+
+.i-text { 
+  width: 240px;
+  height: 37px;
+  border: 1px solid #858585;
+  background: #eef3f8;
+  color: #9cb5cd;
+  font-size: 14px;
+
+  text-indent: 12px;
+
+  box-shadow: 1px 1px 1px #dfe4e8 inset;
+  }
+ 
+.input-yzm { width: 112px; }
+
+.yzm-img { 
+  position: relative;
+	left: 5px;
+	top: 14px;
+	cursor: pointer;
+}
+
+.btn-submit { 
+	width: 242px;
+	height: 38px;
+	background-color: #D4E419;
+	border: none;
+	margin: 0 34px;
+	color: #333;
+	font: bold 16px "微软雅黑";
+}
+
+.i-text:focus {
+	/*border: 1px solid #0787be;*/
+  background: #fff;
+  color: #000;
+  border-color: #0787be;
+  box-shadow: 0 1px 4px rgba(11, 122, 179, 0.65) inset, 0 0 14px rgba(11, 122, 179, 0.45);
+}
+.text-center {
+	text-align: center;
+}
+.tip {
+	font-size: 12px;
+	color: #eee;
+}

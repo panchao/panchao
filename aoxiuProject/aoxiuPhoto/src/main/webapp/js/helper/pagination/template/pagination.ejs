@@ -1,0 +1,37 @@
+
+<li class="prev <%= current === 1 ? 'disabled' : '' %>" role="prev"><a href="javascript:;">前一页</a></li>
+
+<% if (current >= 4) { %>
+  <li class="my-pager"><a href="javascript:;" role="pager">1</a></li>
+  <li class="my-pager" style="display:<%= current - 2 === 2? 'none' : ''%>;"><a href="javascript:;" role="pager">2</a></li>
+<% } %>
+
+<% if (current - 2 - 2 > 1) { %>
+  <li class="disabled"><span>…</span></li>
+<% } %>
+
+<% if (current - 2 > 0) { %>
+  <li class="my-pager"><a href="javascript:;" role="pager"><%= current-2 %></a></li>
+<% } %>
+<% if (current - 1 > 0) { %>
+  <li class="my-pager"><a href="javascript:;" role="pager"><%= current-1 %></a></li>
+<% } %>
+<li class="my-pager active"><a href="javascript:;" role="pager"><%= current %></a></li>
+
+
+<li class="my-pager" style="display:<%= current + 1 >= total - 1? 'none' : ''%>;"><a href="javascript:;" role="pager"><%= current+1 %></a></li>
+
+<li class="my-pager" style="display:<%= current + 2 >= total - 1? 'none' : ''%>;"><a href="javascript:;" role="pager"><%= current+2 %></a></li>
+
+
+
+<% if (total - 1 - (current + 2) > 1) { %>
+  <li class="disabled"><span>…</span></li>
+<% } %>
+
+
+<li class="my-pager" style="display:<%= current >= total - 1? 'none' : ''%>;"><a href="javascript:;" role="pager"><%= total-1 %></a></li>
+<li class="my-pager" style="display:<%= current >= total? 'none' : ''%>;"><a href="javascript:;" role="pager"><%= total %></a></li>
+
+
+<li class="next <%= current === total ? 'disabled' : '' %>" role="next"><a href="javascript:;">后一页</a></li>

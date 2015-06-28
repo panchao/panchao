@@ -1,0 +1,63 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <mapper namespace="customer">
+    <resultMap id="customerResultMap" type="com.aoxiu.meta.photo.Customer">
+        <result column="customer_id" property="customerId" jdbcType="INTEGER"/>
+        <result column="real_name" property="realName" jdbcType="VARCHAR"/>
+        <result column="phone_number" property="phoneNumber" jdbcType="VARCHAR"/>
+        <result column="QQ_number" property="QQNumber" jdbcType="VARCHAR"/>
+        <result column="we_chat" property="weChat" jdbcType="VARCHAR"/>
+        <result column="photographer_id" property="photographersId" jdbcType="INTEGER"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+    </resultMap>
+    
+    <insert id="insertCustomer" parameterType="java.util.Map" useGeneratedKeys="true" keyProperty="customerId">
+        INSERT INTO aoxiu_customer (real_name,phone_number,QQ_number,we_chat,photographer_id,email)
+        SELECT 
+        #{realName,jdbcType=VARCHAR},
+        #{phoneNumber,jdbcType=VARCHAR},
+        #{QQNumber,jdbcType=VARCHAR},
+        #{weChat,jdbcType=VARCHAR},
+        #{photographersId,jdbcType=INTEGER},
+        #{email,jdbcType=VARCHAR}
+        FROM dual
+    </insert>
+    
+    <select id="getCustomers" parameterType="java.util.Map" resultMap="customerResultMap">
+        SELECT  * FROM  aoxiu_customer WHERE photographer_id =  #{photographersId,jdbcType=INTEGER}
+    </select>
+
+    <update id="updateCustomer" parameterType="java.util.Map" >
+        update aoxiu_customer
+        <set>
+            <if test="phoneNumber != null">phone_number=#{phoneNumber,jdbcType=VARCHAR},</if>
+            <if test="weChat != null">we_chat=#{weChat,jdbcType=VARCHAR},</if>
+            <if test="email != null">email=#{email,jdbcType=VARCHAR},</if>
+            <if test="QQNumber != null">QQ_number=#{QQNumber,jdbcType=VARCHAR}</if>
+        </set>
+        where customer_id=#{customerId,jdbcType=INTEGER}
+    </update>
+    <delete id="deleteCustomer" parameterType="java.util.Map" >
+        DELETE FROM aoxiu_customer WHERE customer_id=#{customerId,jdbcType=INTEGER}
+    </delete>
+
+    <select id="getCustomersByCond" parameterType="java.util.Map" resultMap="customerResultMap">
+        SELECT *FROM aoxiu_customer WHERE photographer_id =  #{photographerId,jdbcType=INTEGER}
+    </select>
+
+    <select id="getCustomerByPhoneNumber" parameterType="java.util.Map" resultMap="customerResultMap">
+        SELECT * FROM aoxiu_customer WHERE phone_number=#{phoneNumber,jdbcType=VARCHAR}
+    </select>
+
+    <select id="getCustomerByUserId" parameterType="java.util.Map" resultMap="customerResultMap">
+                SELECT * FROM aoxiu_customer WHERE customer_id=#{userId,jdbcType=INTEGER}
+    </select>
+
+    <select id="getCustomerByNameAndPhotoIdByCond" parameterType="java.util.Map" resultMap="customerResultMap">
+        SELECT * FROM aoxiu_customer WHERE real_name = #{customerName,jdbcType=VARCHAR} AND photographer_id = #{photographerId,jdbcType=INTEGER}
+    </select>
+    <select id="getCustomerByPhotographerIdByCond" parameterType="java.util.Map" resultMap="customerResultMap">
+        SELECT * FROM aoxiu_customer WHERE photographer_id = #{photographerId,jdbcType=INTEGER}
+    </select>
+
+</mapper>

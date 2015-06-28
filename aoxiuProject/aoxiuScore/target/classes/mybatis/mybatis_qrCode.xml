@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <mapper namespace="qrCode">
+    <resultMap id="qrCodeResultMap" type="com.aoxiu.meta.photo.QrCode">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="order_id" property="orderId" jdbcType="INTEGER"/>
+        <result column="get_unselect_url" property="getUnselectedUrl" jdbcType="VARCHAR"/>
+        <result column="get_selected_url" property="getselectedUrl" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="getQrCodeByOrderId" parameterType="java.util.Map" resultMap="qrCodeResultMap">
+        SELECT * FROM aoxiu_qrcode WHERE order_id = #{orderId,jdbcType=INTEGER}
+    </select>
+    <insert id="insertQrCode" parameterType="com.aoxiu.meta.photo.QrCode" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO aoxiu_qrcode (order_id,get_unselect_url,get_selected_url)
+        SELECT
+        #{orderId,jdbcType=INTEGER},
+        #{getUnselectedUrl,jdbcType=VARCHAR},
+        #{getselectedUrl,jdbcType=VARCHAR}
+        from dual
+    </insert>
+</mapper>

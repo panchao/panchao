@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="photographers">
+        <resultMap id="photographersResultMap" type="com.aoxiu.meta.photo.Photographers">
+                <result column="id" property="id" jdbcType="INTEGER"/>
+                <result column="user_id" property="userId" jdbcType="VARCHAR"/>
+                <result column="company_id" property="companyId" jdbcType="VARCHAR"/>
+                <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+                <result column="pass_word" property="passWord" jdbcType="VARCHAR"/>
+                <result column="phone_number" property="phoneNumber" jdbcType="VARCHAR"/>
+                <result column="we_chat" property="weChat" jdbcType="VARCHAR"/>
+        </resultMap>
+        <select id="getPhotographersByUserId" parameterType="java.util.Map"  resultMap="photographersResultMap">
+                select * from aoxiu_photographers where user_id = #{userId,jdbcType=VARCHAR}
+        </select>
+
+        <select id="getPhotographersByUserName" parameterType="java.util.Map" resultMap="photographersResultMap">
+                select * from aoxiu_photographers where user_name = #{userName,jdbcType=VARCHAR}
+        </select>
+
+        <select id="getPhotographersByPhoneNumber" parameterType="java.util.Map" resultMap="photographersResultMap">
+                select * from aoxiu_photographers where phone_number = #{phoneNumber,jdbcType=VARCHAR}
+        </select>
+
+
+</mapper>

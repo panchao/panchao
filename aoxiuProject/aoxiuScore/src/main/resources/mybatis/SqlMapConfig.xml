@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+       <configuration>
+    <mappers>
+        <mapper resource="mybatis/mybatis_photographers.xml" />
+        <mapper resource="mybatis/mybatis_company.xml"/>
+        <mapper resource="mybatis/mybatis_user_company.xml"/>
+        <mapper resource="mybatis/mybatis_IDGenerator.xml"/>
+        <mapper resource="mybatis/mybatis_customer.xml"/>
+        <mapper resource="mybatis/mybatis_photo.xml"/>
+        <mapper resource="mybatis/mybatis_photoContent.xml"/>
+        <mapper resource="mybatis/mybatis_photographerOrder.xml"/>
+        <mapper resource="mybatis/mybatis_album.xml"/>
+        <mapper resource="mybatis/mybatis_album_order.xml"/>
+        <mapper resource="mybatis/mybatis_qrCode.xml"/>
+        <mapper resource="mybatis/mybatis_appraisal.xml"/>
+
+    </mappers>
+</configuration>

@@ -1,0 +1,23 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <mapper namespace="appraisal">
+    <resultMap id="appraisalMap" type="com.aoxiu.meta.photo.Appraisal">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="appraisal" property="appraisal" jdbcType="VARCHAR"/>
+        <result column="appraisaled_id" property="appraisalId" jdbcType="INTEGER"/>
+        <result column="appraisal_star" property="appraisalStar" jdbcType="INTEGER"/>
+    </resultMap>
+    <insert id="insertAppraisal" parameterType="java.util.Map" useGeneratedKeys="true" keyProperty="id">
+
+        INSERT INTO aoxiu_appraisal (appraisal,appraisaled_id,appraisal_star)
+         SELECT
+         #{appraisal,jdbcType=VARCHAR},
+         #{appraisalId,jdbcType=INTEGER},
+         #{appraisalStar,jdbcType=INTEGER}
+         FROM dual
+    </insert>
+
+    <select id="selectAppraisalsByOrderId" parameterType="java.util.Map" resultMap="appraisalMap">
+        select * from aoxiu_appraisal WHERE appraisaled_id = #{orderId,jdbcType=INTEGER};
+    </select>
+</mapper>

@@ -1,0 +1,42 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="albumOrder">
+    <resultMap id="albumOrderMap" type="com.aoxiu.meta.photo.AlbumOrder">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="order_id" property="orderId" jdbcType="INTEGER"/>
+        <result column="photo_id" property="photoId" jdbcType="INTEGER"/>
+        <result column="album_id" property="albumId" jdbcType="INTEGER"/>
+        <result column="album_count" property="albumCount" jdbcType="INTEGER"/>
+        <result column="album_type" property="albumType" jdbcType="VARCHAR"/>
+        <result column="is_paid" property="isPaid" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <insert id="insertBatches" parameterType="java.util.List" useGeneratedKeys="true" keyProperty="id">
+      INSERT INTO aoxiu_album_order (order_id,album_id,photo_id,album_type,album_count,is_paid)
+        <foreach collection="list" item="item" index="index"
+                 separator="union all">
+            select
+            #{item.orderId, jdbcType=INTEGER},
+            #{item.albumId, jdbcType=INTEGER},
+            #{item.photoId,jdbcType=INTEGER},
+            #{item.albumType,jdbcType=VARCHAR},
+            #{item.albumCount,jdbcType=INTEGER},
+            #{item.isPaid,jdbcType=VARCHAR}
+            from dual
+        </foreach>
+    </insert>
+    <insert id="insertOneData" parameterType="com.aoxiu.meta.photo.AlbumOrder" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO aoxiu_album_order (order_id,album_id,photo_id,album_type,album_count,is_paid)
+         SELECT
+            #{orderId, jdbcType=INTEGER},
+            #{albumId, jdbcType=INTEGER},
+            #{photoId,jdbcType=INTEGER},
+            #{albumType,jdbcType=VARCHAR},
+            #{albumCount,jdbcType=INTEGER},
+            #{isPaid,jdbcType=VARCHAR}
+            from dual
+    </insert>
+    <select id="selectAlbumOrder" parameterType="java.util.Map" resultMap="albumOrderMap">
+        SELECT * FROM aoxiu_album_order WHERE order_id = #{orderId,jdbcType=INTEGER}
+    </select>
+</mapper>

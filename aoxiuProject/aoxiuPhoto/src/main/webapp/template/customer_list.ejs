@@ -1,0 +1,11 @@
+<% var customers = data; %>
+
+<% for(var i = 0; i < customers.length; ++i) { %>
+  <tr data-customer='{"id": <%= customers[i].customerId %>}'>
+    <td><%= customers[i].realName %></td>
+    <td><%= customers[i].phoneNumber %></td>
+    <td><%= customers[i].email %></td>
+    <td><%= customers[i].weChat %></td>
+    <td><%= customers[i].qqnumber %></td>
+  </tr>
+<% } %>

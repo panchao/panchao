@@ -1,0 +1,40 @@
+/* timeline */
+.timeline {
+  margin: 20px 0;
+  padding: 0;
+  border-top: 2px solid #428bca;
+  list-style: none;
+}
+
+.timeline-step {
+  float: left;
+  width: 25%;
+  padding-top: 30px;
+  position: relative;
+}
+
+.timeline-step-title {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  margin: -20px 28px 0px 0px;
+}
+
+.timeline-step-marker {
+  width: 20px;
+  height: 20px;
+  margin-left: -25px;
+  background: #fff;
+  border: 4px solid #428bca;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff;
+  text-align: center;
+  color: #428bca;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+}
+.done .timeline-step-marker {
+  background: #428bca;
+  color: #fff;
+}

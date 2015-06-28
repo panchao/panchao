@@ -1,0 +1,35 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <mapper namespace="company">
+    <resultMap id="companyResultMap" type="com.aoxiu.meta.photo.Company">
+        <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+        <result column="pass_word" property="passWord" jdbcType="VARCHAR"/>
+        <result column="province" property="province" jdbcType="VARCHAR"/>
+        <result column="city" property="city" jdbcType="VARCHAR"/>
+        <result column="phone_number" property="phoneNumber" jdbcType="VARCHAR"/>
+        <result column="we_chat" property="weChat" jdbcType="VARCHAR"/>
+        <result column="QQ_number" property="QQNumber" jdbcType="VARCHAR"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="getCompanyUserByName" parameterType="java.util.Map" resultMap="companyResultMap">
+      SELECT * FROM aoxiu_company WHERE user_name = #{userName,jdbcType = VARCHAR}
+    </select>
+    <insert id="insertCompany" parameterType="java.util.Map" useGeneratedKeys="true" keyProperty="companyId">
+        INSERT INTO  aoxiu_company (user_name,pass_word,province,city,area,phone_number,we_chat,QQ_number,email)
+        SELECT
+        #{userName,jdbcType=VARCHAR},
+        #{passWord,jdbcType=VARCHAR},
+        #{province,jdbcType=VARCHAR},
+        #{city,jdbcType=VARCHAR},
+        #{area,jdbcType=VARCHAR},
+        #{phoneNumber,jdbcType=VARCHAR},
+        #{weChat,jdbcType=VARCHAR},
+        #{QQNumber,jdbcType=VARCHAR},
+        #{email,jdbcType=VARCHAR}
+        FROM dual
+        WHERE not exists
+        (SELECT 1 FROM aoxiu_company WHERE user_name = #{userName,jdbcType=VARCHAR}
+        and phone_number = #{phoneNumber,jdbcType=VARCHAR})
+    </insert>
+</mapper>

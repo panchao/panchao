@@ -1,0 +1,141 @@
+/*
+ * from 2015/5/17 10:55
+ * to
+ */
+.aside-tab-current {
+	color: #f00;
+}
+.step-current {
+	color: #f00;
+}
+#customers .selected {
+  color: #f00;
+}
+.step-details {
+  display: none;
+}
+.step-details.current {
+  display: block;
+}
+
+.icon-album {
+  /*border: 1px solid red;*/
+}
+.icon-photo {
+  /*border: 1px solid blue;*/
+}
+.hide {
+  display: none;
+}
+.well {
+  margin-top: 20px;
+}
+
+.my-btn {
+  margin-right: 10px;
+}
+#controller {
+  margin-top: 20px;
+}
+.step-details .item {
+  width: 142px;
+  margin: 10px 0;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+}
+.item-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.item-icon-album {
+  background: url(http://s1.pan.bdstatic.com/yun-static/common-cdn/images/clouddisk-ui/spritenew-f.gif?t=1430995024773) 9999px 9999px no-repeat;
+  background-position: -24px 0;
+}
+.item .widget {
+  width: 22px;
+  height: 22px;
+  padding: 2px 4px;
+  margin: 0 2px;
+  vertical-align: middle;
+  cursor: pointer;
+  display: inline-block;
+  background: url(http://s1.pan.bdstatic.com/yun-static/common/images/btn_icon.gif?t=1430970061094)
+}
+.item .sure {
+  background-position: -0px -512px;
+}
+.item .cancel {
+  background-position: -27px -512px;
+}
+
+.item .box {
+  width: 90px;
+  height: 22px;
+  padding: 2px 4px;
+  vertical-align: middle;
+}
+.item .file-name-box {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 新建客户 */
+.form-control-feedback {
+	position: absolute;
+	left: 190px;
+	top: 10px;
+}
+.help-block {
+  top: 0px;
+  position: absolute;
+  left: 225px;
+  white-space: nowrap;
+}
+.has-error .form-control-feedback {
+  color: #a94442;
+}
+.has-success .form-control-feedback {
+  color: #3c763d;
+}
+.has-feedback .form-control {
+  padding-right: 42px;
+}
+
+/* 调整布局 */
+ol, ul {
+  list-style: none;
+  padding: 0;
+}
+
+.op-nav {
+  padding: 15px 20px;
+  border-right: 1px solid;
+}
+.op-nav li {
+  margin-bottom: 7px;
+}
+
+.op-panel {
+  padding: 15px 20px;
+  min-width: 90%;
+}
+.op-panel .step-details-box {
+  margin-top: 10px;
+}
+#controller {
+  margin-top: 220px;
+  text-align: center;
+}
+
+.header-user {
+  border-bottom: 1px solid;
+  padding-bottom: 15px;
+}
+.header-user .btn {
+  margin-left: 20px;
+}
