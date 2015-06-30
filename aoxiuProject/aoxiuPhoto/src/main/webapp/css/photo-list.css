@@ -1,3 +1,15 @@
+.photos {
+  height: 250px;
+  margin-top: 2em;
+}
 .photos > div {
   margin-bottom: 20px;
+}
+.photos .delete-icon {
+  position: absolute;
+  right: 205px;
+  top: -8px;
+  color: #f00;
+  cursor: pointer;
+  font-size: 2em;
 }
