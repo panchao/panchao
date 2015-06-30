@@ -24,3 +24,8 @@ coverage
 
 # Benchmarking
 benchmarks/graphs
+
+# node test
+server.js
+views
+aoxiuProject/aoxiuPhoto/src/main/config.js
