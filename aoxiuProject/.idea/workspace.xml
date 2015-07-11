@@ -48,11 +48,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PictureController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PictureController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/PictureController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.2222223" vertical-offset="1881" max-vertical-offset="8130">
-              <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.55263156" vertical-offset="3486" max-vertical-offset="8670">
+              <caret line="245" column="60" selection-start-line="245" selection-start-column="50" selection-end-line="245" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,16 +80,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aoxiu-servlet.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/resources/aoxiu-servlet.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1506" max-vertical-offset="2130">
-              <caret line="107" column="44" selection-start-line="107" selection-start-column="44" selection-end-line="107" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -112,11 +102,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin-selected-original-photos.ftl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin-selected-original-photos.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/views/pages/admin-selected-original-photos.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.7924528" vertical-offset="1077" max-vertical-offset="1395">
+            <state vertical-scroll-proportion="2.8823528" vertical-offset="972" max-vertical-offset="1395">
               <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin-selected-original-common.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/js/main/admin-selected-original-common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="592" max-vertical-offset="4155">
+              <caret line="54" column="3" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -203,11 +203,11 @@
         <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/views/pages/retouching-admin.ftl" />
         <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/views/pages/partials/head.ftl" />
         <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/js/main-upload.js" />
-        <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/js/main/admin-selected-original-common.js" />
         <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/resources/aoxiu-servlet.xml" />
         <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/PictureController.java" />
         <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/views/pages/admin-selected-original-photos.ftl" />
+        <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/PictureController.java" />
+        <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/js/main/admin-selected-original-common.js" />
       </list>
     </option>
   </component>
@@ -1146,12 +1146,12 @@
       <workItem from="1436599440349" duration="2412000" />
       <workItem from="1436605132933" duration="2417000" />
       <workItem from="1436630094615" duration="70000" />
-      <workItem from="1436630263563" duration="6294000" />
+      <workItem from="1436630263563" duration="7014000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="479980000" />
+    <option name="totallyTimeSpent" value="480700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="833" extended-state="6" />
@@ -1388,15 +1388,9 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/PictureController.java</url>
-          <line>133</line>
+          <line>278</line>
           <properties />
-          <option name="timeStamp" value="322" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/PictureController.java</url>
-          <line>116</line>
-          <properties />
-          <option name="timeStamp" value="328" />
+          <option name="timeStamp" value="329" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/3.2.4.RELEASE/spring-core-3.2.4.RELEASE.jar!/org/springframework/core/type/classreading/CachingMetadataReaderFactory.class</url>
@@ -1408,7 +1402,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="329" />
+      <option name="time" value="330" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -1767,14 +1761,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/js/main/admin-selected-original-common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3442" max-vertical-offset="4155">
-          <caret line="230" column="0" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/service/photo/impl/OrderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="9372" max-vertical-offset="10050">
@@ -1873,21 +1859,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/PictureController.java">
+    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/views/pages/admin-selected-original-photos.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.2222223" vertical-offset="1881" max-vertical-offset="8130">
-          <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="2.8823528" vertical-offset="972" max-vertical-offset="1395">
+          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/views/pages/admin-selected-original-photos.ftl">
+    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/js/main/admin-selected-original-common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7924528" vertical-offset="1077" max-vertical-offset="1395">
-          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="592" max-vertical-offset="4155">
+          <caret line="54" column="3" selection-start-line="54" selection-start-column="3" selection-end-line="54" selection-end-column="3" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/PictureController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55263156" vertical-offset="3486" max-vertical-offset="8670">
+          <caret line="245" column="60" selection-start-line="245" selection-start-column="50" selection-end-line="245" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -45,16 +45,16 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
   var basicUrl;
   switch (adminPhotoType) {
     case 'original': 
-      basicUrl = '/photographer/'+ photographerId +'/original';
+      basicUrl = '/pictures/selectedManagerJson.do?photographerId=' + photographerId;
       break;
     case 'selected': 
-      basicUrl = '/photographer/'+ photographerId +'/selected-photos';
+      basicUrl = '/pictures/selectedManagerJson.do?photographerId=' + photographerId;
       break;
     default:
       throw new Error('只能是精修片或者原片管理');
   }
 
-  var ajaxUrl = basicUrl + '?count=4&page=';
+  var ajaxUrl = basicUrl + '&count=4&page=';
   var photos = new TemplateController('.photos', '/template/selected-admin.ejs');
   var pager = new Pagination({
     hook: '.my-pager',

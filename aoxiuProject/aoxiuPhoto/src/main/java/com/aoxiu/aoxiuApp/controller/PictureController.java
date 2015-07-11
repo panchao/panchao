@@ -272,6 +272,42 @@ public class PictureController {
         }
     }
 
+    @RequestMapping("/selectedManagerJson.do")
+    @ResponseBody
+    public String selectedManagerJson(HttpServletRequest request){     //精修片管理
+        String customerId = request.getParameter("customerId");
+        String photograpersId = request.getParameter("photographerId");
+        String pageNumStr = request.getParameter("page");
+        String recordPerPageStr = request.getParameter("count");
+        Map<String,String> resultMap = new HashMap<>();
+        if(StringUtils.isEmpty(customerId) || StringUtils.isEmpty(pageNumStr) ||
+                StringUtils.isEmpty(recordPerPageStr)){
+            logger.info("[selectedManager]  wrong parameter");
+            return "error";
+        }
+        try{
+            PaginationInfo paginationInfo = new PaginationInfo();
+            PhotographersContent photographersContent = orderService.getMasterContentsByCustomerId(customerId);
+            List<Photo> photos  = orderService.getSelectedPhotosByCustomerId(customerId,Integer.valueOf(pageNumStr),
+                    Integer.valueOf(recordPerPageStr),paginationInfo);
+            request.setAttribute("data", photos);
+            request.setAttribute("customerId",customerId);
+            request.setAttribute("photographers_id",photograpersId);
+            request.setAttribute("totalPages",paginationInfo.getTotalPage());
+            request.setAttribute("totalPhotos",paginationInfo.getTotalPage());
+            request.setAttribute("title","精修片管理");
+            request.setAttribute("masterContentId",photographersContent.getId());
+            request.setAttribute("type","selected");
+            request.setAttribute("domain","http://qiniu-plupload.qiniudn.com/");
+            request.setAttribute("uptokenUrl","http://localhost:8080/pictures/getToken?type=3");
+            request.setAttribute("albumId",photographersContent.getId());
+            return "admin-selected-original-photos";
+        }catch (Exception e){
+            logger.error("[getSelectedPictrues] get selected pictures error -> " + e.getMessage());
+            return "error";
+        }
+    }
+
     @RequestMapping("/checkSelectedList.do")
     public String getUserSelectedPictures(HttpServletRequest request){     //查看用户选修照片
         String pageNum = request.getParameter("page_num");
