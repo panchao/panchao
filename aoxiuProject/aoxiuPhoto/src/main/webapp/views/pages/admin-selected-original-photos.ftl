@@ -17,17 +17,7 @@
 <div class="pull-left op-panel">
   <input class="admin-photo-type" type="hidden" value="${ type }" />
 
-  <#if type == "original">
-  <div class="my-breadcrumb"></div>
-  <div class="album-box">
-    <input type="hidden" value="${ mainAlbumId }" />
-    <div class="albums">
-      <#list album as data.albums>
-        <#include ../partials/album.ftl>
-      </#list>
-    </div>
-  </div>
-  </#if>
+
 
   <div class="row">
     <div class="col-md-6">共${ totalPhotos }张</div>
@@ -38,21 +28,32 @@
       <input type="hidden" class="album-id" value="${ albumId }">
     </div>
   </div>
-
-
-  <div class="photo-box container-fluid clearfix">
-    <#list photo as data>
-      <div class="col-md-4">
-        <img src="${ photo.src }" width="110" height="95" alt="${ photo.name }" data-img="{&quot;id&quot;: &quot;${ photo.id }&quot;}" />
-        <span class="delete-icon" title="删除该相片">×</span>
-        <div class="pull-right photo-info">
-          <div>名称：${ photo.name }</div>
-          <div>拍摄日期：${ photo.shootTime }</div>
-        </div>
+  <div class="photo-box">
+    <#if type == "original">
+    <div class="my-breadcrumb"></div>
+    <div class="albums">
+      <input type="hidden" value="${ mainAlbumId }" />
+      <div class="albums">
+        <#list album as data.albums>
+          <#include ../partials/album.ftl>
+        </#list>
       </div>
-    </#list>
-  </div>
+    </div>
+    </#if>
 
+    <div class="photos container-fluid clearfix">
+      <#list photo as data>
+        <div class="col-md-4">
+          <img src="${ photo.src }" width="110" height="95" alt="${ photo.name }" data-img="{&quot;id&quot;: &quot;${ photo.id }&quot;}" />
+          <span class="delete-icon" title="删除该相片">×</span>
+          <div class="pull-right photo-info">
+            <div>名称：${ photo.name }</div>
+            <div>拍摄日期：${ photo.shootTime }</div>
+          </div>
+        </div>
+      </#list>
+    </div>
+  </div>
 
   <div class="text-center page-box">
     <input class="total-pages" type="hidden" value="${ totalPages }"/>
