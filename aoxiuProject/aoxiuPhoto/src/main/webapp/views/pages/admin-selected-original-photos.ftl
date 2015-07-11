@@ -1,13 +1,8 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <!-- <title>${ title }</title> -->
-  <title><%= title %></title>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="/css/layout.css" />
+  <#-- 管理精修片或原片 -->
+  <#include "../partials/head.ftl">
   <link rel="stylesheet" href="/css/album.css" />
   <link rel="stylesheet" href="/css/photo-list.css" />
   <link rel="stylesheet" href="/css/selected-admin.css" />
@@ -15,34 +10,28 @@
 
 <body class="container well">
 
-<header class="header-user">
-  <img src="/img/logo.png" />
-
-  <span class="pull-right">
-    <span id="photographer" data-photographer='{"id":"${photographers_id}"}'>XXX</span>，您好
-    <a class="btn btn-warning" href="/users/logout">退出</a><div>
-    </div>
-  </span>
-
-</header>
-
-<nav class="pull-left op-nav">
-  <ul>
-    <li class="aside-tab-current"><a href="/users/gotoPhotoNewOrder.do?photographers_id=${photographers_id}">新增订单</a></li>
-    <li><a href="/users/gotoPhotographerHome.do?photographers_id=${photographers_id}">首页</a></li>
-    <li>客户管理</li>
-    <li>摄影师管理</li>
-    <li><a href="/admin/order/">订单管理</a></li>
-    <li><a href="/admin/comments/">评价管理</a></li>
-    <li>代金券管理</li>
-    <li>水印设置</li>
-    <li>我的资金</li>
-    <li>设置</li>
-  </ul>
+<#include "../partials/header.ftl">
+<#include "../partials/nav.ftl">
 </nav>
 
 <div class="pull-left op-panel">
-  
+  <!-- <input class="type" type="hidden" value="${ type }" /> -->
+  <input class="type" type="hidden" value="<%= type %>" />
+
+  <!-- <#if type == "original"> -->
+  <% if (type == "original") { %>
+  <div class="my-breadcrumb"></div>
+  <div class="album-box">
+    <input type="hidden" value="<%= mainAlbumId %>" />
+    <div class="albums">
+      <% data.albums.forEach(function (album) { %>
+        <% include ../partials/album.ejs %>
+      <% }); %>
+    </div>
+  </div>
+  <% } %>
+  <!-- </#if> -->
+
   <div class="row">
     <!-- 2.1 取消注释 -->
     <!-- <div class="col-md-6">共${ totalPhotos }张</div>
@@ -61,7 +50,7 @@
     <!-- 2.3 取消下面注释
     <#list photo as data>
       <div class="col-md-4">
-        <img src="${ photo.src }" width="110" height="95" alt="${ photo.newName }" data-img='{"id": ${ photo.id }}' />
+        <img src="${ photo.src }" width="110" height="95" alt="${ photo.name }" data-img="{&quot;id&quot;: &quot;${ photo.id }&quot;}" />
         <span class="delete-icon" title="删除该相片">×</span>
         <div class="pull-right photo-info">
           <div>名称：${ photo.name }</div>
@@ -94,6 +83,9 @@
 <script>
   require(['/js/libs/requirejs/config.js'], function () {
     require(['main/admin-selected-original-common']);
+    <% if (type == "original") { %>
+    require(['main/admin-original']);
+    <% } %>
   });
 </script>
 </body>

@@ -1,0 +1,5 @@
+<% data.forEach(function (photo) { %>
+<div class="col-md-4 <%= photo.boxClass? photo.boxClass: '' %>">
+  <%- include ./photo.ejs %>
+</div>
+<% }); %>

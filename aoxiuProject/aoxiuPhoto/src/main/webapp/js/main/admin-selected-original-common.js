@@ -27,6 +27,8 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
     this.template.update(this.box, msg);
   };
   TemplateController.prototype.append = function (msg) {
+    console.log('msg', msg);
+    console.log(this.template);
     this.$box.append(this.template.render(msg));
   };
 
@@ -37,7 +39,7 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
 
   // start it
   var photographerId = $('#photographer').data('photographer').id;
-  var adminPhotoType = $('input.'); // 'selected' or original
+  var adminPhotoType = $('input.type').val(); // selected or original
 
   console.log('adminPhotoType', adminPhotoType);
   var basicUrl;
@@ -198,11 +200,7 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
 
         var $uploading = $photoBox.find('.uploading');
         var photo;
-<<<<<<< HEAD
-        var uploadUrl = 'selected-photos';
-=======
         var uploadUrl = '/pictures/uploadPictures.do';
->>>>>>> 4c2c96e2a5a0d93138a258132d6a064279282f3d
         $.ajax({
           url: uploadUrl,
           type: 'POST',
@@ -216,10 +214,10 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
           .fail(function (jqXHR, textStatus) {
             // do nothing
           })
-          .done(function (data) {
-            console.log('data:', data);
-              alert(data);
-              data = data['data'];
+          .done(function (result) {
+            console.log('result:', result);
+              alert(result);
+              data = result['data'];
               console.log('data:', data);
               alert(data);
               $uploading.find('img').each(function (index) {
@@ -229,7 +227,7 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
                 throw new TypeError('POST ' + uploadUrl + ' 返回数据没有包含上传照片的id');
               }
 
-              $img.data('img').id = photo.id;
+              $img.data('img').id = photo.photoId;
               $img.siblings('.photo-info').find('.shootTime').text(photo.shootTime);
             });
           });
