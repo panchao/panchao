@@ -1,6 +1,6 @@
 /*
- * from 2015/5/17 10:55
- * to 2015-06-14 16:22:34;
+ * 2015/5/17 10:55
+ * 2015-06-14 16:22:34
  */
 
 ol, ul {
@@ -14,7 +14,6 @@ ol, ul {
 
 .op-nav {
   padding: 15px 20px;
-  border-right: 1px solid;
 }
 .op-nav li {
   margin-bottom: 7px;
@@ -23,6 +22,7 @@ ol, ul {
 .op-panel {
   padding: 15px 20px;
   width: 90%;
+  border-left: 1px solid;
 }
 .op-panel .row {
   margin-bottom: 10px;

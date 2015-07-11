@@ -1,0 +1,29 @@
+{
+  "name": "aoxiu-photo",
+  "version": "1.0.0",
+  "description": "aoxiu photo admin app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panchao/panchao.git"
+  },
+  "keywords": [
+    "aoxiu",
+    "photo"
+  ],
+  "author": "legend80s panchao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/panchao/panchao/issues"
+  },
+  "homepage": "https://github.com/panchao/panchao#readme",
+  "dependencies": {
+    "body-parser": "^1.13.1",
+    "ejs": "^2.3.2",
+    "qiniu": "^6.1.8"
+  }
+}
