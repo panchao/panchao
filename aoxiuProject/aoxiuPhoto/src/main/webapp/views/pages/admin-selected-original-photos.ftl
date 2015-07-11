@@ -15,39 +15,32 @@
 </nav>
 
 <div class="pull-left op-panel">
-  <!-- <input class="type" type="hidden" value="${ type }" /> -->
-  <input class="type" type="hidden" value="<%= type %>" />
+  <input class="admin-photo-type" type="hidden" value="${ type }" />
 
-  <!-- <#if type == "original"> -->
-  <% if (type == "original") { %>
+  <#if type == "original">
   <div class="my-breadcrumb"></div>
   <div class="album-box">
-    <input type="hidden" value="<%= mainAlbumId %>" />
+    <input type="hidden" value="${ mainAlbumId }" />
     <div class="albums">
-      <% data.albums.forEach(function (album) { %>
-        <% include ../partials/album.ejs %>
-      <% }); %>
+      <#list album as data.albums>
+        <#include ../partials/album.ftl>
+      </#list>
     </div>
   </div>
-  <% } %>
-  <!-- </#if> -->
+  </#if>
 
   <div class="row">
-    <!-- 2.1 取消注释 -->
-    <!-- <div class="col-md-6">共${ totalPhotos }张</div>
-    <!-- 2.2 注释掉下面一行 -->
-    <div class="col-md-6">共<%= totalPhotos %>张</div>
+    <div class="col-md-6">共${ totalPhotos }张</div>
     <div class="col-md-6">
       <button class="btn btn-info" id="pickfiles">上传照片</button>
-      <input type="hidden" class="domain" value="<%= domain %>">
-      <input type="hidden" class="uptoken-url" value="<%= uptokenUrl %>">
-      <input type="hidden" class="album-id" value="<%= albumId %>">
+      <input type="hidden" class="domain" value="${ domain }">
+      <input type="hidden" class="uptoken-url" value="${ uptokenUrl }">
+      <input type="hidden" class="album-id" value="${ albumId }">
     </div>
   </div>
 
 
   <div class="photo-box container-fluid clearfix">
-    <!-- 2.3 取消下面注释
     <#list photo as data>
       <div class="col-md-4">
         <img src="${ photo.src }" width="110" height="95" alt="${ photo.name }" data-img="{&quot;id&quot;: &quot;${ photo.id }&quot;}" />
@@ -58,23 +51,11 @@
         </div>
       </div>
     </#list>
-    -->
-    <!-- 2.4 注释掉下面 -->
-    <div class="photos">  
-      <% data.photos.forEach(function (photo) { %>
-        <div class="col-md-4">
-          <% include ../partials/photo.ejs %>
-        </div>
-      <% }); %>
-    </div>
-
   </div>
 
-  <!-- 1.1 去掉下面input的注释 -->
-  <!-- <input type="hidden" value="${ totalPages }"/> -->
-  <!-- 1.2 注释掉下面input -->
+
   <div class="text-center page-box">
-    <input type="hidden" value="<%= totalPages %>"/>
+    <input class="total-pages" type="hidden" value="${ totalPages }"/>
     <div class="my-pager"></div>
   </div>
 </div>
@@ -83,9 +64,9 @@
 <script>
   require(['/js/libs/requirejs/config.js'], function () {
     require(['main/admin-selected-original-common']);
-    <% if (type == "original") { %>
+    <#if type == "original">
     require(['main/admin-original']);
-    <% } %>
+    </#if>
   });
 </script>
 </body>
