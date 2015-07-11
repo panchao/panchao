@@ -27,6 +27,8 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
     this.template.update(this.box, msg);
   };
   TemplateController.prototype.append = function (msg) {
+    console.log('msg', msg);
+    console.log(this.template);
     this.$box.append(this.template.render(msg));
   };
 
@@ -34,8 +36,11 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
     var id = $('.breadcrumb > .active').data('url').match(/&album_id=([^&]*)/);
     return id? id[1] : '';
   }
+
   // start it
   var photographerId = $('#photographer').data('photographer').id;
+  var adminPhotoType = $('input.type').val(); // selected or original
+
   console.log('adminPhotoType', adminPhotoType);
   var basicUrl;
   switch (adminPhotoType) {
@@ -209,8 +214,15 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
           .fail(function (jqXHR, textStatus) {
             // do nothing
           })
+<<<<<<< HEAD
           .done(function (data) {
               data = data['data'];
+=======
+          .done(function (result) {
+            console.log('result:', result);
+              alert(result);
+              data = result['data'];
+>>>>>>> b517d7872a5c9855c332e37a28fd3f0d9d094f41
               console.log('data:', data);
               $uploading.find('img').each(function (index) {
               var $img = $(this);
@@ -220,8 +232,12 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
               }
 
               $img.data('img').id = photo.photoId;
+<<<<<<< HEAD
                 console.log('photoId:', photo.photoId);
                 $img.siblings('.photo-info').find('.shootTime').text(photo.shootTime);
+=======
+              $img.siblings('.photo-info').find('.shootTime').text(photo.shootTime);
+>>>>>>> b517d7872a5c9855c332e37a28fd3f0d9d094f41
             });
           });
 

@@ -1,0 +1,11 @@
+<% for (var i = 0; i < commentInfo.length; ++i) { %>
+<% var info = commentInfo[i]; %>
+<tr>
+  <td><%= info.orderId %></td>
+  <td><%= info.customerName %></td>
+  <td><%= info.customerPhone %></td>
+  <td><%= info.status %></td>
+  <td><%= info.starNum %></td>
+  <td><%= info.comment %></td>
+</tr>
+<% } %>

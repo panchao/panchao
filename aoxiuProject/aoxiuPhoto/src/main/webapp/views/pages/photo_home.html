@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <!-- <title>摄影师首页</title> -->
+  <#include "../partials/head.ftl">
+</head>
+
+<body class="container well">
+
+<#include "../partials/header.ftl">
+
+<#include "../partials/nav.ftl">
+
+<div class="pull-left op-panel">
+  <table class="table table-bordered">
+    <thead>
+      <th>订单编号</th>
+      <th>用户名</th>
+      <th>用户编号</th>
+      <th>水印类型</th>
+      <th>最大精修张数</th>
+      <th>超出价格（元/张）</th>
+      <th>订单状态</th>
+      <th>创建时间</th>
+    </thead>
+
+    <!-- 由ajax动态生成 -->
+    <tbody id="order-list"></tbody>
+  </table>
+  <div id="storage"></div>
+</div>
+
+
+<script src="/js/libs/requirejs/2.1.18/require.min.js"></script>
+<script>
+require(['/js/libs/requirejs/config.js'], function () {
+  require(['main/photographer-home']);
+});
+</script>
+
+</body>
+</html>
