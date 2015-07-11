@@ -39,7 +39,7 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
 
   // start it
   var photographerId = $('#photographer').data('photographer').id;
-  var adminPhotoType = $('input.type').val(); // selected or original
+  var adminPhotoType = $('input.admin-photo-type').val(); // selected or original
 
   console.log('adminPhotoType', adminPhotoType);
   var basicUrl;
@@ -58,7 +58,7 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
   var photos = new TemplateController('.photos', '/template/selected-admin.ejs');
   var pager = new Pagination({
     hook: '.my-pager',
-    total: $('.page-box input:hidden').val(),
+    total: $('.total-pages').val(),
     onPageClick: function (event, page) {
       var url = ajaxUrl + page;
       adminPhotoType === 'original' && (url += '&albumId=' + getAlbumId());
