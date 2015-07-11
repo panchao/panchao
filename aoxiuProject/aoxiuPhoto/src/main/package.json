@@ -24,6 +24,7 @@
   "dependencies": {
     "body-parser": "^1.13.1",
     "ejs": "^2.3.2",
+    "freemarker.js": "^1.2.0",
     "qiniu": "^6.1.8"
   }
 }

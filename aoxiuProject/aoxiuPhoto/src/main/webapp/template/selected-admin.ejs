@@ -1,4 +1,4 @@
-<% data.forEach(function (photo) { %>
+<% photos.forEach(function (photo) { %>
     <div class="col-md-4 <%= photo.boxClass? photo.boxClass: '' %>">
       <img src="<%= photo.src %>" width="110" height="95" alt="<%= photo.name %>" data-img='{"id": "<%= photo.id %>"}' />
       <span class="delete-icon" title="删除该相片">×</span>

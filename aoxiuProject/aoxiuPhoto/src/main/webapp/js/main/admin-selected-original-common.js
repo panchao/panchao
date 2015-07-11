@@ -8,18 +8,20 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
   }
   TemplateController.prototype.update = function (ajaxUrl, callback) {
     var self = this;
-    $.get(ajaxUrl).done(function (msg) {
-      if (msg.retCode == 200) {
-        self._update(msg);
-        callback && callback(msg.totalPages);
-      }
-      else {
-        console.error('retCode != 200');
-      }
-    })
-    .fail(function () {
-      console.error('failed GET ' + ajaxUrl);
-    });
+
+    $.get(ajaxUrl)
+      .done(function (msg) {
+        if (msg.retCode == 200) {
+          self._update(msg.data);
+          callback && callback(msg.totalPages);
+        }
+        else {
+          console.error('retCode != 200');
+        }
+      })
+      .fail(function () {
+        console.error('failed GET ' + ajaxUrl);
+      });
   };
   TemplateController.prototype._update = function (msg) {
     this.template.update(this.box, msg);
@@ -28,16 +30,34 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
     this.$box.append(this.template.render(msg));
   };
 
+  function getAlbumId() {
+    var id = $('.breadcrumb > .active').data('url').match(/&album_id=([^&]*)/);
+    return id? id[1] : '';
+  }
   // start it
   var photographerId = $('#photographer').data('photographer').id;
-  var basicUrl = '/photographer/'+ photographerId +'/retouching-photos';
+  console.log('adminPhotoType', adminPhotoType);
+  var basicUrl;
+  switch (adminPhotoType) {
+    case 'original': 
+      basicUrl = '/photographer/'+ photographerId +'/original';
+      break;
+    case 'selected': 
+      basicUrl = '/photographer/'+ photographerId +'/selected-photos';
+      break;
+    default:
+      throw new Error('只能是精修片或者原片管理');
+  }
+
   var ajaxUrl = basicUrl + '?count=4&page=';
-  var photos = new TemplateController('.photos', '/template/retouching-admin.ejs');
+  var photos = new TemplateController('.photos', '/template/selected-admin.ejs');
   var pager = new Pagination({
     hook: '.my-pager',
-    total: $('.op-panel input:hidden').val(),
+    total: $('.page-box input:hidden').val(),
     onPageClick: function (event, page) {
-      photos.update(ajaxUrl + page);
+      var url = ajaxUrl + page;
+      adminPhotoType === 'original' && (url += '&albumId=' + getAlbumId());
+      photos.update(url);
     }
   });
 
@@ -175,7 +195,7 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
 
         var $uploading = $photoBox.find('.uploading');
         var photo;
-        var uploadUrl = 'retouching-photos';
+        var uploadUrl = 'selected-photos';
         $.ajax({
           url: uploadUrl,
           type: 'POST',

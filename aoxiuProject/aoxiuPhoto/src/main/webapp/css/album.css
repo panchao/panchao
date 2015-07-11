@@ -1,0 +1,46 @@
+.item {
+  width: 142px;
+  margin: 10px 0;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+}
+.item .item-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.item .item-icon-album {
+  background: url(http://s1.pan.bdstatic.com/yun-static/common-cdn/images/clouddisk-ui/spritenew-f.gif?t=1430995024773) 9999px 9999px no-repeat;
+  background-position: -24px 0;
+}
+.item .widget {
+  width: 22px;
+  height: 22px;
+  padding: 2px 4px;
+  margin: 0 2px;
+  vertical-align: middle;
+  cursor: pointer;
+  display: inline-block;
+  background: url(http://s1.pan.bdstatic.com/yun-static/common/images/btn_icon.gif?t=1430970061094)
+}
+.item .sure {
+  background-position: -0px -512px;
+}
+.item .cancel {
+  background-position: -27px -512px;
+}
+
+.item .box {
+  width: 90px;
+  height: 22px;
+  padding: 2px 4px;
+  vertical-align: middle;
+}
+.item .file-name-box {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
