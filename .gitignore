@@ -27,6 +27,6 @@ benchmarks/graphs
 
 # node test
 server.js
-views
+views-node
 aoxiuProject/aoxiuPhoto/src/main/config.js
 test
