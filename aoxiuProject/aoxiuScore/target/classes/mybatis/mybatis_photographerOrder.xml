@@ -12,7 +12,7 @@
         <result column="get_code" property="getCode" jdbcType="VARCHAR"/>
         <result column="get_code_selected" property="getCodeSelected" jdbcType="VARCHAR"/>
         <result column="price_per_photo" property="pricePerPhoto" jdbcType="DOUBLE"/>
-        <result column="order_step"  property="orderStep" jdbcType="INTEGER"/>
+        <result column="order_step"  property="orderStep" jdbcType="VARCHAR"/>
         <result column="create_time" property="createTime" jdbcType="TIMESTAMP"/>
         <result column="update_time" property="updateTime" jdbcType="TIMESTAMP"/>
         <result column="watermark_type" property="watermarkType" jdbcType="VARCHAR"/>
@@ -31,7 +31,7 @@
         #{getCode,jdbcType=VARCHAR},
         #{getCodeSelected,jdbcType=VARCHAR},
         #{pricePerPhoto,jdbcType=INTEGER},
-        #{orderStep,jdbcType=INTEGER},
+        #{orderStep,jdbcType=VARCHAR},
         #{createTime,jdbcType=TIMESTAMP},
         #{updateTime,jdbcType=TIMESTAMP},
         #{watermarkType,jdbcType=VARCHAR}
@@ -46,7 +46,7 @@
             <if test="maxSelectCount != null">max_select_count=#{maxSelectCount,jdbcType=INTEGER},</if>
             <if test="giftAlbumsType != null">gift_albums_type=#{giftAlbumsType,jdbcType=INTEGER},</if>
             <if test="pricePerPhoto != null">price_per_photo=#{pricePerPhoto,jdbcType=DOUBLE},</if>
-            <if test="orderStep != null">order_step=#{orderStep,jdbcType=INTEGER},</if>
+            <if test="orderStep != null">order_step=#{orderStep,jdbcType=VARCHAR},</if>
             <if test="getCode != null">get_code=#{getCode,jdbcType=VARCHAR},</if>
             <if test="updateTime != null">update_time = #{updateTime,jdbcType=TIMESTAMP}</if>
 

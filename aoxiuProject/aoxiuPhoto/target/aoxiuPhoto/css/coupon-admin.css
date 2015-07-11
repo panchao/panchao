@@ -1,0 +1,13 @@
+table caption {
+  padding: 8px;
+  text-align: left;
+}
+
+.coupon .form-inline {
+  margin-bottom: 1em;
+}
+
+.coupon .form-group,
+.coupon .col-md-3 {
+  padding-left: 0;
+}

@@ -87,7 +87,7 @@
     </select>
 
     <select id="getSelectedPhotosBatches" parameterType="java.util.List" resultMap="photoMap">
-        SELECT * FROM aoxiu_photo WHERE photo_type = 2 and photo_content_id IN
+        SELECT * FROM aoxiu_photo WHERE photo_type = 3 and photo_content_id IN
         <foreach item="item" index="index" collection="list"
                  open="(" separator="," close=")">
             #{item}

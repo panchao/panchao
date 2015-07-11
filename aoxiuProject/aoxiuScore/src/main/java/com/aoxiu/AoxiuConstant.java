@@ -10,7 +10,9 @@ public class AoxiuConstant {
     public static Integer AOXIU_PHOTOGRAPHERS_ORDER = 1;
     public static Integer AOXIU_COMPANY_ORDER = 1;
     public static Integer AOXIU_PHOTO_UNSELECTED = 1;//表示照片为原片类型
-    public static Integer AOXIU_PHOTO_SELECTED = 2;  //为选出的精装图片
+    public static Integer AOXIU_PHOTO_USER_SELECTED = 2;  //为用户选出的精装图片
+    public static Integer AOXIU_PHOTO_PHOTOGRAPHER_SELECTED = 2;  //为摄影师上传的精装图片
+
 
     public static String AOXIU_PICTURES_PREFIX = "http://7xis67.com2.z0.glb.qiniucdn.com/";//傲秀照片地址前缀
 

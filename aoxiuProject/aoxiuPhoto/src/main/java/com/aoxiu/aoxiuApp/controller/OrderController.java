@@ -1,6 +1,7 @@
 package com.aoxiu.aoxiuApp.controller;
 
 import com.aoxiu.AoxiuConstant;
+import com.aoxiu.AoxiuOrderStatus;
 import com.aoxiu.ComRet;
 import com.aoxiu.aoxiuApp.utils.GeneratorCode;
 import com.aoxiu.aoxiuApp.utils.MatrixToImageWriter;
@@ -94,7 +95,7 @@ public class OrderController {
                 photographerOrder.setAddWaterMark(0);
                 photographerOrder.setWatermarkType(watermarkType);
             }
-            photographerOrder.setOrderStep(1);                               //订单状态  TODO 换成常量
+            photographerOrder.setOrderStep(AoxiuOrderStatus.ORIGIN_NOT_UPLOADED);                               //订单状态
             photographerOrder.setPhotographersId(Integer.valueOf(photographersId));
             photographerOrder.setUserId(Integer.valueOf(userId));
 //            Map<String,Object> map = new HashMap<>();

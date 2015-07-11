@@ -195,13 +195,18 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
 
         var $uploading = $photoBox.find('.uploading');
         var photo;
+<<<<<<< HEAD
         var uploadUrl = 'selected-photos';
+=======
+        var uploadUrl = '/pictures/uploadPictures.do';
+>>>>>>> 4c2c96e2a5a0d93138a258132d6a064279282f3d
         $.ajax({
           url: uploadUrl,
           type: 'POST',
           data: JSON.stringify({
             album_id: albumId,
-            names: filenames
+            names: filenames,
+            type:"selected"
           }),
           contentType: 'application/json; charset=utf-8'
         })
@@ -209,8 +214,12 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
             // do nothing
           })
           .done(function (data) {
-            //console.log('data:', data);
-            $uploading.find('img').each(function (index) {
+            console.log('data:', data);
+              alert(data);
+              data = data['data'];
+              console.log('data:', data);
+              alert(data);
+              $uploading.find('img').each(function (index) {
               var $img = $(this);
               photo = data[index];
               if (!photo) {

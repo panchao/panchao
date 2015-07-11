@@ -26,7 +26,7 @@ public class PhotographerOrder {
     //订单的类型，1表示摄影师建的，2表示婚庆建的
     private Integer selectPhotoType;
     //订单状态
-    private Integer orderStep;
+    private String orderStep;
 
     //水印类型
     private String watermarkType;
@@ -131,11 +131,11 @@ public class PhotographerOrder {
         this.selectPhotoType = selectPhotoType;
     }
 
-    public Integer getOrderStep() {
+    public String getOrderStep() {
         return orderStep;
     }
 
-    public void setOrderStep(Integer orderStep) {
+    public void setOrderStep(String orderStep) {
         this.orderStep = orderStep;
     }
 
