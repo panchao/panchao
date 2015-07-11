@@ -17,7 +17,6 @@
 <div class="pull-left op-panel">
   <input class="admin-photo-type" type="hidden" value="${ type }" />
 
-<<<<<<< HEAD
   <#--<#if type == "original">-->
   <#--<div class="my-breadcrumb"></div>-->
   <#--<div class="album-box">-->
@@ -29,9 +28,7 @@
     <#--</div>-->
   <#--</div>-->
   <#--</#if>-->
-=======
 
->>>>>>> ad316cb92b7aa95aa4d1f2389f0502f086b7f5c1
 
   <div class="row">
     <div class="col-md-6">共${ totalPhotos }张</div>
@@ -40,6 +37,8 @@
       <input type="hidden" class="domain" value="${ domain }">
       <input type="hidden" class="uptoken-url" value="${ uptokenUrl }">
       <input type="hidden" class="album-id" value="${ albumId }">
+        <input type="hidden" class="customer-id" value="${ customerId }">
+
     </div>
   </div>
   <div class="photo-box">
