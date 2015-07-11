@@ -97,7 +97,7 @@
 <script src="/js/libs/requirejs/2.1.18/require.min.js"></script>
 <script>
 require(['/js/libs/requirejs/config.js'], function () {
-  require(['main/retouching-admin']);
+  require(['main/admin-selected-original-common']);
 });
 </script>
 </body>

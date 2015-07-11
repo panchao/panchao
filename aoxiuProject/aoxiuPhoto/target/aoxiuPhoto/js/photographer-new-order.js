@@ -15,16 +15,16 @@
     $next.prop('disabled', false);
   });
 
-  var $next = $('.next'),
-      $prev = $('.prev'),
-      $entry = $('#to-entry-code'),
-      $orderForm = $('#new-order'),
-      $requiredInput = $orderForm.find('input[required]'),
-      allFilled,
-      //orderHasSubmitted,
-      orderId,
-      mainAlbumId,
-      breadCrumb;
+  var $next = $('.next');
+  var $prev = $('.prev');
+  var $entry = $('#to-entry-code');
+  var $orderForm = $('#new-order');
+  var $requiredInput = $orderForm.find('input[required]');
+  var allFilled;
+  var orderId;
+  var mainAlbumId;
+  var breadCrumb;
+  var albumAjaxUrl = '../pictures/album.do?photograper_id=';
 
   $next.on('click', function () {
     var $currentStep = $('.step-details.current');
@@ -58,13 +58,13 @@
                   hook: '#step-photo-upload-breadcrumb',
                   ajax: true,
                   dirs: [{
-                    url: '../pictures/album.do?photograper_id='+ photographerId + '&album_id=' + mainAlbumId,
+                    url: albumAjaxUrl + photographerId + '&album_id=' + mainAlbumId,
                     text: '主相册'
                   }],
                   callback: updateCustomerList
                 });
 
-                $.getJSON('../pictures/album.do?photograper_id='+ photographerId +'&orderId='+ orderId, updateCustomerList);
+                $.getJSON(albumAjaxUrl + photographerId +'&orderId='+ orderId, updateCustomerList);
 
 
               }
@@ -184,7 +184,7 @@
       $input.focus();
       return false;
     }
-    var ajaxUrl = '../pictures/album.do?photograper_id='+ photographerId +'&album_id='+ $this.data('album').id;
+    var ajaxUrl = albumAjaxUrl + photographerId +'&album_id='+ $this.data('album').id;
     $.getJSON(ajaxUrl, updateCustomerList);
 
     breadCrumb.append(ajaxUrl, this.title);

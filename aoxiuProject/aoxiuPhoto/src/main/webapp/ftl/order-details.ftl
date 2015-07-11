@@ -47,9 +47,9 @@
       <span class="col-md-12">订单类型：${order.orderType}</span>
     </div>
     <div class="row-order-inner">
-      <span class="col-md-5">精修张数：<span class="display-label">${order.selectedCount}</span><input class="edit-input" type="number" value="${order.selectedCount}" style="display:none;" />张<button class="btn btn-success edit-btn" data-post-param="selectedCount">修改</button></span>
+      <span class="col-md-5">精修张数：<span class="display-label">${order.selectedCount}</span><input class="edit-input" type="number" value="${order.selectedCount}" style="display:none;" />张<button class="btn btn-success edit-btn" data-post-param="selectedCount">修改</button><span class="alert alert-danger" style="display:none;">修改失败</span></span>
 
-      <span class="col-md-7">额外精修价格：<span class="display-label">${order.pricePerPhoto}</span><input class="edit-input" type="number" value="${order.pricePerPhoto}" style="display:none;" />元/张<button class="btn btn-success edit-btn" data-post-param="extraPrice">修改</button></span>
+      <span class="col-md-7">额外精修价格：<span class="display-label">${order.pricePerPhoto}</span><input class="edit-input" type="number" value="${order.pricePerPhoto}" style="display:none;" />元/张<button class="btn btn-success edit-btn" data-post-param="extraPrice">修改</button><span class="alert alert-danger" style="display:none;">修改失败</span></span>
     </div>
   </div>
   <input type="hidden" id="order-id" value="${order.orderId}" />

@@ -195,11 +195,7 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
 
         var $uploading = $photoBox.find('.uploading');
         var photo;
-<<<<<<< HEAD
-        var uploadUrl = 'selected-photos';
-=======
         var uploadUrl = '/pictures/uploadPictures.do';
->>>>>>> 4c2c96e2a5a0d93138a258132d6a064279282f3d
         $.ajax({
           url: uploadUrl,
           type: 'POST',
@@ -214,11 +210,8 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
             // do nothing
           })
           .done(function (data) {
-            console.log('data:', data);
-              alert(data);
               data = data['data'];
               console.log('data:', data);
-              alert(data);
               $uploading.find('img').each(function (index) {
               var $img = $(this);
               photo = data[index];
@@ -226,8 +219,9 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
                 throw new TypeError('POST ' + uploadUrl + ' 返回数据没有包含上传照片的id');
               }
 
-              $img.data('img').id = photo.id;
-              $img.siblings('.photo-info').find('.shootTime').text(photo.shootTime);
+              $img.data('img').id = photo.photoId;
+                console.log('photoId:', photo.photoId);
+                $img.siblings('.photo-info').find('.shootTime').text(photo.shootTime);
             });
           });
 

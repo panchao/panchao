@@ -48,11 +48,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PictureController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PictureController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/PictureController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.2222223" vertical-offset="5972" max-vertical-offset="9146">
-              <caret line="358" column="24" selection-start-line="358" selection-start-column="18" selection-end-line="358" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.55263156" vertical-offset="1656" max-vertical-offset="8070">
+              <caret line="123" column="58" selection-start-line="123" selection-start-column="46" selection-end-line="123" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -63,73 +63,28 @@
       <file leaf-file-name="OrderServiceImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/service/photo/impl/OrderServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.8888888" vertical-offset="0" max-vertical-offset="10050">
-              <caret line="26" column="53" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="53" />
+            <state vertical-scroll-proportion="-4.0" vertical-offset="9357" max-vertical-offset="10050">
+              <caret line="650" column="23" selection-start-line="650" selection-start-column="23" selection-end-line="650" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/service/photo/OrderService.java">
+      <file leaf-file-name="photo-admin-selected.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/photo-admin-selected.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.4444447" vertical-offset="0" max-vertical-offset="1680">
-              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1183" max-vertical-offset="1635">
+              <caret line="99" column="47" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="retouching-admin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/js/main/retouching-admin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.740741" vertical-offset="961" max-vertical-offset="3765">
-              <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AoxiuOrderStatus.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/AoxiuOrderStatus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.888889" vertical-offset="36" max-vertical-offset="465">
-              <caret line="23" column="50" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhotographerOrder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/meta/photo/PhotographerOrder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1665">
-              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PhotoDaoImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/dao/photo/impl/PhotoDaoImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="1335">
-              <caret line="39" column="57" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="57" />
-              <folding>
-                <element signature="e#521#522#0" expanded="true" />
-                <element signature="e#593#594#0" expanded="true" />
-                <element signature="e#1135#1136#0" expanded="true" />
-                <element signature="e#1209#1210#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OrderController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.85945946" vertical-offset="1752" max-vertical-offset="7575">
-              <caret line="138" column="44" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2106" max-vertical-offset="7575">
+              <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -137,23 +92,97 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mybatis_photo.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aoxiuScore/src/main/resources/mybatis/mybatis_photo.xml">
+      <file leaf-file-name="qiniu.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/js/qiniu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.5185184" vertical-offset="571" max-vertical-offset="1740">
-              <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="6352" max-vertical-offset="12615">
+              <caret line="432" column="44" selection-start-line="432" selection-start-column="44" selection-end-line="432" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderDetail.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/meta/photo/common/OrderDetail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="1020">
+              <caret line="11" column="32" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="32" />
               <folding>
-                <marker date="1435765345000" expanded="true" signature="870:940" placeholder="SELECT * FRO..aoxiu_photo..." />
-                <marker date="1435765345000" expanded="true" signature="1051:1131" placeholder="SELECT * FRO..aoxiu_photo..." />
-                <marker date="1435765345000" expanded="true" signature="1261:1645" placeholder="INSERT INTO ..." />
-                <marker date="1435765345000" expanded="true" signature="1375:1645" placeholder="SELECT #{pho..dual..." />
-                <marker date="1435765345000" expanded="true" signature="2009:2336" placeholder="select #{ite..dual..." />
-                <marker date="1435765345000" expanded="true" signature="2466:2538" placeholder="SELECT * FRO..aoxiu_photo..." />
-                <marker date="1435765345000" expanded="true" signature="2999:3407" placeholder="UPDATE aoxiu..." />
-                <marker date="1435765345000" expanded="true" signature="3539:3803" placeholder="SELECT * FRO..aoxiu_photo..." />
-                <marker date="1435765345000" expanded="true" signature="3912:3994" placeholder="SELECT * FRO..aoxiu_photo..." />
-                <marker date="1435765345000" expanded="true" signature="4117:4199" placeholder="SELECT * FRO..aoxiu_photo..." />
+                <element signature="e#468#469#0" expanded="false" />
+                <element signature="e#497#498#0" expanded="false" />
+                <element signature="e#538#539#0" expanded="false" />
+                <element signature="e#574#575#0" expanded="false" />
+                <element signature="e#612#613#0" expanded="false" />
+                <element signature="e#649#650#0" expanded="false" />
+                <element signature="e#706#707#0" expanded="false" />
+                <element signature="e#758#759#0" expanded="false" />
+                <element signature="e#789#790#0" expanded="false" />
+                <element signature="e#819#820#0" expanded="false" />
+                <element signature="e#862#863#0" expanded="false" />
+                <element signature="e#900#901#0" expanded="false" />
+                <element signature="e#939#940#0" expanded="false" />
+                <element signature="e#974#975#0" expanded="false" />
+                <element signature="e#1030#1031#0" expanded="false" />
+                <element signature="e#1078#1079#0" expanded="false" />
+                <element signature="e#1116#1117#0" expanded="false" />
+                <element signature="e#1150#1151#0" expanded="false" />
+                <element signature="e#1204#1205#0" expanded="false" />
+                <element signature="e#1250#1251#0" expanded="false" />
+                <element signature="e#1286#1287#0" expanded="false" />
+                <element signature="e#1318#1319#0" expanded="false" />
+                <element signature="e#1368#1369#0" expanded="false" />
+                <element signature="e#1410#1411#0" expanded="false" />
+                <element signature="e#1447#1448#0" expanded="false" />
+                <element signature="e#1483#1484#0" expanded="false" />
+                <element signature="e#1538#1539#0" expanded="false" />
+                <element signature="e#1588#1589#0" expanded="false" />
+                <element signature="e#1628#1629#0" expanded="false" />
+                <element signature="e#1664#1665#0" expanded="false" />
+                <element signature="e#1722#1723#0" expanded="false" />
+                <element signature="e#1772#1773#0" expanded="false" />
+                <element signature="e#1805#1806#0" expanded="false" />
+                <element signature="e#1834#1835#0" expanded="false" />
+                <element signature="e#1878#1879#0" expanded="false" />
+                <element signature="e#1914#1915#0" expanded="false" />
+                <element signature="e#1952#1953#0" expanded="false" />
+                <element signature="e#1986#1987#0" expanded="false" />
+                <element signature="e#2040#2041#0" expanded="false" />
+                <element signature="e#2086#2087#0" expanded="false" />
+                <element signature="e#2126#2127#0" expanded="false" />
+                <element signature="e#2162#2163#0" expanded="false" />
+                <element signature="e#2220#2221#0" expanded="false" />
+                <element signature="e#2270#2271#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="订单详情-order-details.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/订单详情-order-details.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1650">
+              <caret line="15" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="104" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="order-details.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/order-details.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="659" max-vertical-offset="1590">
+              <caret line="51" column="259" selection-start-line="51" selection-start-column="249" selection-end-line="51" selection-end-column="259" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin-selected-original-common.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/js/main/admin-selected-original-common.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="4035">
+              <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,8 +190,8 @@
       <file leaf-file-name="photo-admin.ftl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/photo-admin.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.291667" vertical-offset="929" max-vertical-offset="1635">
-              <caret line="80" column="33" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1185" max-vertical-offset="1635">
+              <caret line="83" column="50" selection-start-line="83" selection-start-column="50" selection-end-line="83" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -173,8 +202,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/dao/photo/impl/VouchersDaoImpl.java" />
-        <option value="$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/dao/photo/impl/VouchersDao.java" />
         <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/CustomerController.java" />
         <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/js/config.js" />
         <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/css/my-main.css" />
@@ -202,7 +229,6 @@
         <option value="$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/dao/photo/PhotoDao.java" />
         <option value="$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/service/photo/impl/PhotoServiceImpl.java" />
         <option value="$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/dao/photo/impl/PhotoDaoImpl.java" />
-        <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/order-details.ftl" />
         <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/order-admin.ftl" />
         <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/check-list.ftl" />
         <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/appraisalManager.ftl" />
@@ -216,7 +242,6 @@
         <option value="$PROJECT_DIR$/aoxiuScore/src/main/resources/mybatis/mybatis_photographerOrder.xml" />
         <option value="$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/AoxiuConstant.java" />
         <option value="$PROJECT_DIR$/aoxiuScore/src/main/resources/mybatis/mybatis_photo.xml" />
-        <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/photo-admin.ftl" />
         <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/order-adminSelected.ftl" />
         <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/photo-adminSelected.ftl" />
         <option value="$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/AoxiuOrderStatus.java" />
@@ -224,6 +249,10 @@
         <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/js/main/retouching-admin.js" />
         <option value="$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/service/photo/impl/OrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/service/photo/OrderService.java" />
+        <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/photo-admin-selected.ftl" />
+        <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/photo-admin.ftl" />
+        <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/order-details.ftl" />
+        <option value="$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/js/main/admin-selected-original-common.js" />
       </list>
     </option>
   </component>
@@ -253,9 +282,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="24" />
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="836" />
+    <option name="height" value="833" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -392,75 +421,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aoxiuProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aoxiuProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aoxiuPhoto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aoxiuApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aoxiuProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aoxiuProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aoxiuPhoto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aoxiuApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
-        <option name="show-excluded-files" value="false" />
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -480,12 +444,12 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/java/silver" />
     <property name="LayoutCode.rearrangeEntriesXML" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="photo.xml&#9;FILE&#9;file:///Users/panchao/freeTime/panchao/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_photo.xml&#10;pho&#9;FILE&#9;file:///Users/panchao/freeTime/panchao/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_photographerOrder.xml&#10;photographer&#9;FILE&#9;file:///Users/panchao/freeTime/panchao/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_photographerOrder.xml&#10;Aoxiu&#9;FILE&#9;file:///Users/panchao/freeTime/panchao/aoxiuProject/aoxiuScore/src/main/java/com/aoxiu/AoxiuConstant.java&#10;OrderContr&#9;FILE&#9;file:///Users/panchao/freeTime/panchao/aoxiuProject/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/OrderController.java&#10;config.js&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuPhoto/src/main/webapp/js/config.js&#10;config.&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuPhoto/src/main/webapp/js/libs/requirejs/config.js&#10;OrderD&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuPhoto/src/main/webapp/ftl/order-details.ftl&#10;order.xml&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_photographerOrder.xml&#10;order.xm&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_album_order.xml&#10;retouching-admin&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuPhoto/src/main/webapp/js/main/retouching-admin.js&#10;photo.xm&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_photo.xml&#10;photo&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_photo.xml&#10;qr&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_qrCode.xml&#10;photocon&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_photoContent.xml&#10;OrderDao&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/java/com/aoxiu/dao/photo/impl/PhotographerOrderDaoImpl.java&#10;SimpleMa&#9;PSI&#9;JAVA://org.springframework.mail.SimpleMailMessage&#10;Login&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/Filter/LoginFilter.java&#10;LoginFi&#9;PSI&#9;JAVA://com.aoxiu.aoxiuApp.Filter.LoginFilter&#10;Base&#9;PSI&#9;JAVA://com.aoxiu.dao.BaseDao&#10;Com&#9;PSI&#9;JAVA://com.aoxiu.meta.photo.Company&#10;User&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/java/com/aoxiu/dao/photo/impl/UserCompanyDaoImpl.java&#10;Photo&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/java/com/aoxiu/meta/photo/Photographers.java&#10;AoxiuCo&#9;PSI&#9;JAVA://com.aoxiu.AoxiuConstant&#10;Controller&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/LoginController.java&#10;Contro&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/LoginController.java" />
+    <property name="SearchEverywhereHistoryKey" value="Picture&#9;FILE&#9;file:///Users/panchao/freeTime/panchao/aoxiuProject/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/PictureController.java&#10;photo.xml&#9;FILE&#9;file:///Users/panchao/freeTime/panchao/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_photo.xml&#10;pho&#9;FILE&#9;file:///Users/panchao/freeTime/panchao/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_photographerOrder.xml&#10;photographer&#9;FILE&#9;file:///Users/panchao/freeTime/panchao/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_photographerOrder.xml&#10;Aoxiu&#9;FILE&#9;file:///Users/panchao/freeTime/panchao/aoxiuProject/aoxiuScore/src/main/java/com/aoxiu/AoxiuConstant.java&#10;OrderContr&#9;FILE&#9;file:///Users/panchao/freeTime/panchao/aoxiuProject/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/OrderController.java&#10;config.js&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuPhoto/src/main/webapp/js/config.js&#10;config.&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuPhoto/src/main/webapp/js/libs/requirejs/config.js&#10;OrderD&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuPhoto/src/main/webapp/ftl/order-details.ftl&#10;order.xml&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_photographerOrder.xml&#10;order.xm&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_album_order.xml&#10;retouching-admin&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuPhoto/src/main/webapp/js/main/retouching-admin.js&#10;photo.xm&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_photo.xml&#10;photo&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_photo.xml&#10;qr&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_qrCode.xml&#10;photocon&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/resources/mybatis/mybatis_photoContent.xml&#10;OrderDao&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/java/com/aoxiu/dao/photo/impl/PhotographerOrderDaoImpl.java&#10;SimpleMa&#9;PSI&#9;JAVA://org.springframework.mail.SimpleMailMessage&#10;Login&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/Filter/LoginFilter.java&#10;LoginFi&#9;PSI&#9;JAVA://com.aoxiu.aoxiuApp.Filter.LoginFilter&#10;Base&#9;PSI&#9;JAVA://com.aoxiu.dao.BaseDao&#10;Com&#9;PSI&#9;JAVA://com.aoxiu.meta.photo.Company&#10;User&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/java/com/aoxiu/dao/photo/impl/UserCompanyDaoImpl.java&#10;Photo&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuScore/src/main/java/com/aoxiu/meta/photo/Photographers.java&#10;AoxiuCo&#9;PSI&#9;JAVA://com.aoxiu.AoxiuConstant&#10;Controller&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/LoginController.java&#10;Contro&#9;FILE&#9;file:///Users/panchao/RedisClient/aoxiuProject/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/LoginController.java" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="dir.diff.last.used.directory" value="$USER_HOME$/Downloads/新增订单-新建客户-2015-5-17/js" />
@@ -866,7 +830,7 @@
       <method />
     </configuration>
     <configuration default="false" name="aoxiuPhoto" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.57" ALTERNATIVE_JRE_ENABLED="false" ALTERNATIVE_JRE_PATH="">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/aoxiuPhoto/index.html" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index.html" />
       <option name="UPDATING_POLICY" value="update-resources" />
       <deployment>
         <artifact name="aoxiuPhoto:war exploded">
@@ -877,7 +841,7 @@
       </deployment>
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_aoxiuProject_2" />
-        <option name="JNDI_PORT" value="1098" />
+        <option name="JNDI_PORT" value="1999" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -1023,19 +987,21 @@
       <workItem from="1435674773532" duration="2980000" />
       <workItem from="1435761486165" duration="3099000" />
       <workItem from="1436197537162" duration="1292000" />
-      <workItem from="1436586020228" duration="5268000" />
+      <workItem from="1436586020228" duration="6455000" />
+      <workItem from="1436599440349" duration="2412000" />
+      <workItem from="1436605132933" duration="1798000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="467600000" />
+    <option name="totallyTimeSpent" value="472997000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1440" height="836" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="833" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13519314" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1047,23 +1013,23 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.49874055" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928476" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32258064" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46505377" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4642375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.50125945" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32392472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.09298999" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32253712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1136,12 +1102,6 @@
           <line>238</line>
           <properties />
           <option name="timeStamp" value="68" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/OrderController.java</url>
-          <line>122</line>
-          <properties />
-          <option name="timeStamp" value="109" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/service/photo/impl/OrderServiceImpl.java</url>
@@ -1335,7 +1295,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="718">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1360,13 +1319,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/template/retouching-admin.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="718">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/order_confirm.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1695">
@@ -1381,33 +1333,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/css/retouching-admin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/retouching-admin.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.875" vertical-offset="684" max-vertical-offset="1545">
-          <caret line="63" column="59" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/meta/photo/Photo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1095">
           <caret line="14" column="27" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/meta/photo/common/OrderDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1422,7 +1351,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="705">
           <caret line="14" column="92" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="92" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1546,13 +1474,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/order-details.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="778" max-vertical-offset="1590">
-          <caret line="86" column="39" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aoxiuScore/src/main/resources/mybatis/mybatis_photographerOrder.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="79" max-vertical-offset="1575">
@@ -1565,7 +1486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1770">
           <caret line="17" column="80" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1589,15 +1509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1650">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/photo-admin-selected.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0784316" vertical-offset="851" max-vertical-offset="1635">
-          <caret line="74" column="23" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1605,7 +1516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.5490196" vertical-offset="914" max-vertical-offset="1635">
           <caret line="73" column="17" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1613,15 +1523,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="990">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/photo-admin.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.291667" vertical-offset="929" max-vertical-offset="1635">
-          <caret line="80" column="33" selection-start-line="80" selection-start-column="33" selection-end-line="80" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1629,15 +1530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.888889" vertical-offset="36" max-vertical-offset="465">
           <caret line="23" column="50" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/js/main/retouching-admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.740741" vertical-offset="961" max-vertical-offset="3765">
-          <caret line="78" column="32" selection-start-line="78" selection-start-column="32" selection-end-line="78" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1645,31 +1537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="277" max-vertical-offset="1335">
           <caret line="39" column="57" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="57" />
-          <folding>
-            <element signature="e#521#522#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#1135#1136#0" expanded="true" />
-            <element signature="e#1209#1210#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aoxiuScore/src/main/resources/mybatis/mybatis_photo.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.5185184" vertical-offset="571" max-vertical-offset="1740">
-          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
-          <folding>
-            <marker date="1435765345000" expanded="true" signature="870:940" placeholder="SELECT * FRO..aoxiu_photo..." />
-            <marker date="1435765345000" expanded="true" signature="1051:1131" placeholder="SELECT * FRO..aoxiu_photo..." />
-            <marker date="1435765345000" expanded="true" signature="1261:1645" placeholder="INSERT INTO ..." />
-            <marker date="1435765345000" expanded="true" signature="1375:1645" placeholder="SELECT #{pho..dual..." />
-            <marker date="1435765345000" expanded="true" signature="2009:2336" placeholder="select #{ite..dual..." />
-            <marker date="1435765345000" expanded="true" signature="2466:2538" placeholder="SELECT * FRO..aoxiu_photo..." />
-            <marker date="1435765345000" expanded="true" signature="2999:3407" placeholder="UPDATE aoxiu..." />
-            <marker date="1435765345000" expanded="true" signature="3539:3803" placeholder="SELECT * FRO..aoxiu_photo..." />
-            <marker date="1435765345000" expanded="true" signature="3912:3994" placeholder="SELECT * FRO..aoxiu_photo..." />
-            <marker date="1435765345000" expanded="true" signature="4117:4199" placeholder="SELECT * FRO..aoxiu_photo..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1677,40 +1544,228 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="1665">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#935#936#0" expanded="false" />
+            <element signature="e#971#972#0" expanded="false" />
+            <element signature="e#1032#1033#0" expanded="false" />
+            <element signature="e#1082#1083#0" expanded="false" />
+            <element signature="e#1113#1114#0" expanded="false" />
+            <element signature="e#1143#1144#0" expanded="false" />
+            <element signature="e#1186#1187#0" expanded="false" />
+            <element signature="e#1224#1225#0" expanded="false" />
+            <element signature="e#1258#1259#0" expanded="false" />
+            <element signature="e#1287#1288#0" expanded="false" />
+            <element signature="e#1332#1333#0" expanded="false" />
+            <element signature="e#1368#1369#0" expanded="false" />
+            <element signature="e#1411#1412#0" expanded="false" />
+            <element signature="e#1449#1450#0" expanded="false" />
+            <element signature="e#1512#1513#0" expanded="false" />
+            <element signature="e#1566#1567#0" expanded="false" />
+            <element signature="e#1606#1607#0" expanded="false" />
+            <element signature="e#1641#1642#0" expanded="false" />
+            <element signature="e#1698#1699#0" expanded="false" />
+            <element signature="e#1746#1747#0" expanded="false" />
+            <element signature="e#1788#1789#0" expanded="false" />
+            <element signature="e#1825#1826#0" expanded="false" />
+            <element signature="e#1886#1887#0" expanded="false" />
+            <element signature="e#1938#1939#0" expanded="false" />
+            <element signature="e#1980#1981#0" expanded="false" />
+            <element signature="e#2017#2018#0" expanded="false" />
+            <element signature="e#2078#2079#0" expanded="false" />
+            <element signature="e#2130#2131#0" expanded="false" />
+            <element signature="e#2164#2165#0" expanded="false" />
+            <element signature="e#2194#2195#0" expanded="false" />
+            <element signature="e#2240#2241#0" expanded="false" />
+            <element signature="e#2278#2279#0" expanded="false" />
+            <element signature="e#2320#2321#0" expanded="false" />
+            <element signature="e#2358#2359#0" expanded="false" />
+            <element signature="e#2420#2421#0" expanded="false" />
+            <element signature="e#2474#2475#0" expanded="false" />
+            <element signature="e#2514#2515#0" expanded="false" />
+            <element signature="e#2550#2551#0" expanded="false" />
+            <element signature="e#2608#2609#0" expanded="false" />
+            <element signature="e#2658#2659#0" expanded="false" />
+            <element signature="e#2701#2702#0" expanded="false" />
+            <element signature="e#2739#2740#0" expanded="false" />
+            <element signature="e#2802#2803#0" expanded="false" />
+            <element signature="e#2856#2857#0" expanded="false" />
+            <element signature="e#2892#2893#0" expanded="false" />
+            <element signature="e#2924#2925#0" expanded="false" />
+            <element signature="e#2974#2975#0" expanded="false" />
+            <element signature="e#3016#3017#0" expanded="false" />
+            <element signature="e#3056#3057#0" expanded="false" />
+            <element signature="e#3092#3093#0" expanded="false" />
+            <element signature="e#3150#3151#0" expanded="false" />
+            <element signature="e#3200#3201#0" expanded="false" />
+            <element signature="e#3235#3236#0" expanded="false" />
+            <element signature="e#3268#3269#0" expanded="false" />
+            <element signature="e#3318#3319#0" expanded="false" />
+            <element signature="e#3362#3363#0" expanded="false" />
+            <element signature="e#3397#3398#0" expanded="false" />
+            <element signature="e#3430#3431#0" expanded="false" />
+            <element signature="e#3480#3481#0" expanded="false" />
+            <element signature="e#3524#3525#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/service/photo/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4444447" vertical-offset="0" max-vertical-offset="1680">
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1680">
           <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/retouching-admin.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1093" max-vertical-offset="1545">
+          <caret line="93" column="17" selection-start-line="93" selection-start-column="17" selection-end-line="93" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/service/photo/impl/OrderServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/aoxiuScore/src/main/resources/mybatis/mybatis_photo.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8888888" vertical-offset="0" max-vertical-offset="10050">
-          <caret line="26" column="53" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1740">
+          <caret line="18" column="106" selection-start-line="18" selection-start-column="106" selection-end-line="18" selection-end-column="106" />
+          <folding>
+            <marker date="1435765345000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..aoxiu_photo..." />
+            <marker date="1435765345000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..aoxiu_photo..." />
+            <marker date="1435765345000" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1435765345000" expanded="true" signature="-1:-1" placeholder="SELECT #{pho..dual..." />
+            <marker date="1435765345000" expanded="true" signature="-1:-1" placeholder="select #{ite..dual..." />
+            <marker date="1435765345000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..aoxiu_photo..." />
+            <marker date="1435765345000" expanded="true" signature="-1:-1" placeholder="UPDATE aoxiu..." />
+            <marker date="1435765345000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..aoxiu_photo..." />
+            <marker date="1435765345000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..aoxiu_photo..." />
+            <marker date="1435765345000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..aoxiu_photo..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/订单详情-order-details.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="1650">
+          <caret line="15" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="104" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/PictureController.java">
+    <entry file="file://$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/meta/photo/common/OrderDetail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.2222223" vertical-offset="5972" max-vertical-offset="9146">
-          <caret line="358" column="24" selection-start-line="358" selection-start-column="18" selection-end-line="358" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="e#468#469#0" expanded="false" />
+            <element signature="e#497#498#0" expanded="false" />
+            <element signature="e#538#539#0" expanded="false" />
+            <element signature="e#574#575#0" expanded="false" />
+            <element signature="e#612#613#0" expanded="false" />
+            <element signature="e#649#650#0" expanded="false" />
+            <element signature="e#706#707#0" expanded="false" />
+            <element signature="e#758#759#0" expanded="false" />
+            <element signature="e#789#790#0" expanded="false" />
+            <element signature="e#819#820#0" expanded="false" />
+            <element signature="e#862#863#0" expanded="false" />
+            <element signature="e#900#901#0" expanded="false" />
+            <element signature="e#939#940#0" expanded="false" />
+            <element signature="e#974#975#0" expanded="false" />
+            <element signature="e#1030#1031#0" expanded="false" />
+            <element signature="e#1078#1079#0" expanded="false" />
+            <element signature="e#1116#1117#0" expanded="false" />
+            <element signature="e#1150#1151#0" expanded="false" />
+            <element signature="e#1204#1205#0" expanded="false" />
+            <element signature="e#1250#1251#0" expanded="false" />
+            <element signature="e#1286#1287#0" expanded="false" />
+            <element signature="e#1318#1319#0" expanded="false" />
+            <element signature="e#1368#1369#0" expanded="false" />
+            <element signature="e#1410#1411#0" expanded="false" />
+            <element signature="e#1447#1448#0" expanded="false" />
+            <element signature="e#1483#1484#0" expanded="false" />
+            <element signature="e#1538#1539#0" expanded="false" />
+            <element signature="e#1588#1589#0" expanded="false" />
+            <element signature="e#1628#1629#0" expanded="false" />
+            <element signature="e#1664#1665#0" expanded="false" />
+            <element signature="e#1722#1723#0" expanded="false" />
+            <element signature="e#1772#1773#0" expanded="false" />
+            <element signature="e#1805#1806#0" expanded="false" />
+            <element signature="e#1834#1835#0" expanded="false" />
+            <element signature="e#1878#1879#0" expanded="false" />
+            <element signature="e#1914#1915#0" expanded="false" />
+            <element signature="e#1952#1953#0" expanded="false" />
+            <element signature="e#1986#1987#0" expanded="false" />
+            <element signature="e#2040#2041#0" expanded="false" />
+            <element signature="e#2086#2087#0" expanded="false" />
+            <element signature="e#2126#2127#0" expanded="false" />
+            <element signature="e#2162#2163#0" expanded="false" />
+            <element signature="e#2220#2221#0" expanded="false" />
+            <element signature="e#2270#2271#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/photo-admin-selected.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1183" max-vertical-offset="1635">
+          <caret line="99" column="47" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/order-details.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="659" max-vertical-offset="1590">
+          <caret line="51" column="259" selection-start-line="51" selection-start-column="249" selection-end-line="51" selection-end-column="259" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2106" max-vertical-offset="7575">
+          <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/OrderController.java">
+    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/js/qiniu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.85945946" vertical-offset="1752" max-vertical-offset="7575">
-          <caret line="138" column="44" selection-start-line="138" selection-start-column="33" selection-end-line="138" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="6352" max-vertical-offset="12615">
+          <caret line="432" column="44" selection-start-line="432" selection-start-column="44" selection-end-line="432" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/ftl/photo-admin.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1185" max-vertical-offset="1635">
+          <caret line="83" column="50" selection-start-line="83" selection-start-column="50" selection-end-line="83" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/js/main/admin-selected-original-common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="4035">
+          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aoxiuScore/src/main/java/com/aoxiu/service/photo/impl/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.0" vertical-offset="9357" max-vertical-offset="10050">
+          <caret line="650" column="23" selection-start-line="650" selection-start-column="23" selection-end-line="650" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp/controller/PictureController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55263156" vertical-offset="1656" max-vertical-offset="8070">
+          <caret line="123" column="58" selection-start-line="123" selection-start-column="46" selection-end-line="123" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

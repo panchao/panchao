@@ -7,6 +7,12 @@ define(['jquery', 'ejs'], function ($, EJS) {
 
   function Pagination(customerSettings) {
 
+    if (this._created) {
+      return this;
+    }
+
+    this._created = true;
+
     this._$pageBox = $(customerSettings.hook);
     if (this._$pageBox.length === 0) {
       throw new TypeError('the pagination must be attached to an existing element');
@@ -18,8 +24,8 @@ define(['jquery', 'ejs'], function ($, EJS) {
     this._addEvent();
   }
 
-  // public: _init, _addEvent, _update
-  // private: update
+  // private: _init, _addEvent, _update
+  // public: update
   Pagination.prototype = {
     constructor: Pagination,
 
