@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$USER_HOME$/chuanzong/out-resource-photo/app/public/js/libs/requirejs/config.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/aoxiuPhoto" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/aoxiuPhoto/src/main/java/com/aoxiu/aoxiuApp" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/aoxiuPhoto/src/main/webapp/js/main/comment-admin.js" charset="GBK" />
     <file url="file://$PROJECT_DIR$/aoxiuScore" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/aoxiuScore/src/main/resources/mybatis" charset="UTF-8" />
-    <file url="file://$USER_HOME$/chuanzong/out-resource-photo/app/public/js/libs/requirejs/config.js" charset="UTF-8" />
   </component>
 </project>

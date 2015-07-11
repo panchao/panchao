@@ -5,7 +5,9 @@ import com.aoxiu.ComRet;
 import com.aoxiu.aoxiuApp.uploadPictures.GeneratorToken;
 import com.aoxiu.common.PaginationInfo;
 import com.aoxiu.dao.photo.PhotoDao;
+import com.aoxiu.dao.photo.PhotographerOrderDao;
 import com.aoxiu.meta.photo.Photo;
+import com.aoxiu.meta.photo.PhotographerOrder;
 import com.aoxiu.meta.photo.Photographers;
 import com.aoxiu.meta.photo.common.PhotographersContent;
 import com.aoxiu.meta.photo.common.PhotographersPhoto;
@@ -36,20 +38,14 @@ import java.util.concurrent.ExecutionException;
 @Controller
 public class PictureController {
     Logger logger = LoggerFactory.getLogger(getClass());
-
     @Resource
     private OrderService orderService;
     @Resource
     private PhotoService photoService;
+
+    @Resource
+    private PhotographerOrderDao photographerOrderDao;
     /**
-     * order-type:1
-     max_count:2
-     price_per_photo:55
-     watermark_id:1
-     album_id:1
-     photographers_id:1
-     user_id:0
-     type:cameraman
      * @param request
      * @param response
      * @return
@@ -115,6 +111,7 @@ public class PictureController {
         return resultMap;
     }
     @RequestMapping("/uploadPictures.do")
+    @ResponseBody
     public Object uploadPictures(HttpServletRequest request,HttpServletResponse response ,@RequestBody String jsonStr){
         Map<String,Object> resultMap = new HashMap<>();
         if(StringUtils.isEmpty(jsonStr)){
@@ -124,15 +121,18 @@ public class PictureController {
             return  resultMap;
         }
         try{
-            boolean isSucess = orderService.uploadPhotos(jsonStr);
-            if(isSucess){
-                resultMap.put(ComRet.retCode,ComRet.SUCESS);
-                resultMap.put(ComRet.retDesc,ComRet.SUCESS_DESC);
-            }else{
-                resultMap.put(ComRet.retCode,ComRet.FAIL);
-                resultMap.put(ComRet.retDesc,ComRet.FAIL_DESC);
-                logger.error("[addContent] add content fail");
-            }
+            List<Photo> photos = orderService.uploadPhotos(jsonStr);
+//            if(isSucess){
+//                resultMap.put(ComRet.retCode,ComRet.SUCESS);
+//                resultMap.put(ComRet.retDesc,ComRet.SUCESS_DESC);
+//            }else{
+//                resultMap.put(ComRet.retCode,ComRet.FAIL);
+//                resultMap.put(ComRet.retDesc,ComRet.FAIL_DESC);
+//                logger.error("[addContent] add content fail");
+//            }
+            resultMap.put(ComRet.retCode,ComRet.SUCESS);
+            resultMap.put(ComRet.retDesc,ComRet.SUCESS_DESC);
+            resultMap.put(ComRet.retData,photos);
         }catch (Exception e){
             resultMap.put(ComRet.retCode,ComRet.FAIL);
             resultMap.put(ComRet.retDesc,ComRet.FAIL_DESC);
@@ -145,7 +145,7 @@ public class PictureController {
     public String getPictures(HttpServletRequest request,HttpServletResponse response){
         String contentId = request.getParameter("contentId");
         if(StringUtils.isEmpty(contentId)){
-            logger.error("[uploadPictures] upload pictures wrong parameter");
+            logger.error("[getPictures] upload pictures wrong parameter");
             return  "error";
         }
         Map<String,String> urls = null;
@@ -215,18 +215,25 @@ public class PictureController {
     public String unSelectManager(HttpServletRequest request){
         String customerId = request.getParameter("customerId");
         String photograpersId = request.getParameter("photographerId");
+        Map<String,Object> resultMap = new HashMap<>();
         if(StringUtils.isEmpty(customerId)){
             logger.info("[selectedManager]  wrong parameter");
             return "error";
         }
         try{
-            List<Photo> photos = photoService.getUnSelectPhotosByCustomerId(customerId);
-            request.setAttribute("data",photos);
+            PhotographerOrder photographerOrder = photographerOrderDao.getPhotographerOrderByUserId(customerId);
+            PhotographersContent photographersContent = orderService.getMasterContents(photographerOrder.getOrderId() + "");
+            List<PhotographersContent> photographersContents = orderService.getContentByAlbumId(photographersContent.getId() + "");
+            List<PhotographersPhoto> photographersPhotos = orderService.getOrderMainContentPhotos(photographerOrder.getOrderId() + "");
+            request.setAttribute("albums", photographersContents);
+            request.setAttribute("photos",photographersPhotos);
+            request.setAttribute("data",photographersPhotos);
             request.setAttribute("customerId",customerId);
             request.setAttribute("photographers_id",photograpersId);
-            request.setAttribute("totalPages",100);
-            request.setAttribute("totalPhotos",2000);
             request.setAttribute("title","原片管理");
+            request.setAttribute("masterContentId",photographersContent.getId());
+            request.setAttribute("totalPages",200);
+            request.setAttribute("totalPhotos",2000);
             return "photo-admin";
         }catch (Exception e){
             logger.error("[getSelectedPictrues] get selected pictures error -> " + e.getMessage());
@@ -245,6 +252,7 @@ public class PictureController {
         }
         try{
             PaginationInfo paginationInfo = new PaginationInfo();
+            PhotographersContent photographersContent = orderService.getMasterContentsByCustomerId(customerId);
             List<Photo> photos  = orderService.getSelectedPhotosByCustomerId(customerId,1,AoxiuConstant.AOXIU_RECORD_PER_PAGE,paginationInfo);
             request.setAttribute("data", photos);
             request.setAttribute("customerId",customerId);
@@ -252,7 +260,8 @@ public class PictureController {
             request.setAttribute("totalPages",paginationInfo.getTotalPage());
             request.setAttribute("totalPhotos",paginationInfo.getTotalPage());
             request.setAttribute("title","精修片管理");
-            return "photo-admin";
+            request.setAttribute("masterContentId",photographersContent.getId());
+            return "photo-admin-selected";
         }catch (Exception e){
             logger.error("[getSelectedPictrues] get selected pictures error -> " + e.getMessage());
             return "error";
@@ -326,7 +335,7 @@ public class PictureController {
         if(StringUtils.isEmpty(photoIds)){
             resultMap.put(ComRet.retCode,ComRet.WRONG_PARAMETER);
             resultMap.put(ComRet.retDesc,ComRet.WRONG_PARAMETER_DESC);
-            logger.error("[uploadPictures] upload pictures wrong parameter");
+            logger.error("[deletePictures] delete pictures wrong parameter");
             return  resultMap;
         }
         try{
@@ -371,7 +380,7 @@ public class PictureController {
 
     @RequestMapping("/addSelecedPictures.do")
     @ResponseBody
-    public Object addSelecedPictures(HttpServletRequest request){
+    public Object addSelecedPictures(HttpServletRequest request){    // 客户选择选修照片
         String picIds = request.getParameter("picIds");
         Map<String,Object> resultMap = new HashMap<>();
         if(StringUtils.isEmpty(picIds)){

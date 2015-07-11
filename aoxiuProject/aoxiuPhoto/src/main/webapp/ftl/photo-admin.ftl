@@ -39,7 +39,7 @@
 
 <div class="pull-left op-panel">
   <!-- 1.1 去掉下面input的注释 -->
-   <input type="hidden" value="${ totalPages }"/>
+   <input type="hidden" value="${totalPages }"/>
   <!-- 1.2 注释掉下面input -->
   <#--<input type="hidden" value="<%= totalPages %>"/>-->
   <div class="row">
@@ -51,21 +51,30 @@
       <button class="btn btn-info" id="pickfiles">上传照片</button>
       <input type="hidden" class="domain" value="http://qiniu-plupload.qiniudn.com/">
       <input type="hidden" class="uptoken-url" value="http://localhost:8080/pictures/getToken?type=3">
-      <input type="hidden" class="album-id" value="<%= albumId %>">
+      <input type="hidden" class="album-id" value="${masterContentId}">
      </div>
   </div>
 
   <div class="photos container-fluid clearfix">
     <!-- 2.3 取消下面注释-->
-    <#list data as photo>
+    <#--<#list data as photo>-->
+      <#--<div class="col-md-4">-->
+        <#--<img src="${ photo.photoSrc }/${photo.photoNameOld}" width="110" height="95" data-img='{"id": ${ photo.photoId }}' />-->
+        <#--<span class="delete-icon" title="删除该相片">×</span>-->
+        <#--<div class="pull-right photo-info">-->
+          <#--<div>名称：${ photo.photoNameOld }</div>-->
+        <#--</div>-->
+      <#--</div>-->
+    <#--</#list>-->
+  <#list data as photo>
       <div class="col-md-4">
-        <img src="${ photo.photoSrc }/${photo.photoNameOld}" width="110" height="95" data-img='{"id": ${ photo.photoId }}' />
-        <span class="delete-icon" title="删除该相片">×</span>
-        <div class="pull-right photo-info">
-          <div>名称：${ photo.photoNameOld }</div>
-        </div>
+          <img src="${ photo.src }" width="110" height="95" data-img='{"id": ${ photo.id }}' />
+          <span class="delete-icon" title="删除该相片">×</span>
+          <div class="pull-right photo-info">
+              <div>名称：${ photo.name }</div>
+          </div>
       </div>
-    </#list>
+  </#list>
     <!-- 2.4 注释掉下面 -->
     <!--<% data.forEach(function (photo) { %>-->
         <!--<div class="col-md-4">-->

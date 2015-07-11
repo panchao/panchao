@@ -19,7 +19,7 @@ public interface OrderService {
     public int updateOrder(String waterMark,String maxCount,String orderId,String getCode,String price);
     public Map<String,Object> addOrder(PhotographerOrder photographerOrder,String type);
     public int deleteOrder(String orderId,String type);
-    public boolean uploadPhotos(String jsonStr);
+    public List<Photo> uploadPhotos(String jsonStr);
 
     public int addNewContent(String contentName,String orderId,String photoId);
 
@@ -104,6 +104,13 @@ public interface OrderService {
      * @return
      */
     public List<Photo> getSelectedPhotosByCustomerId(String customerId,int pageNum,int recordPerPage,PaginationInfo paginationInfo);
+
+    /**
+     * 通过客户编号获得主目录
+     * @param customerId
+     * @return
+     */
+    public PhotographersContent getMasterContentsByCustomerId(String customerId);
 
 
 }

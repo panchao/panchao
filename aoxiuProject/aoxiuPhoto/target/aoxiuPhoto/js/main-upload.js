@@ -94,8 +94,9 @@
             data: JSON.stringify({
               //albumName: albumBreadCrumb.$current().text(),
               // $('#step-photo-upload .breadcrumb .active').text()
-              album_id: getAlbumId(),
-              names: filenames
+                album_id: getAlbumId(),
+                names: filenames,
+                type:"unselected"
             }),
             dataType: "json",
             contentType: 'application/json; charset=utf-8'

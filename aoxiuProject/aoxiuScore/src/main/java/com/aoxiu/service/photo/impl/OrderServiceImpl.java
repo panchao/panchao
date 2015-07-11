@@ -229,7 +229,7 @@ public class OrderServiceImpl implements OrderService {
         for (int i = 0; i < ids.length; i++) {
             Photo photo = new Photo();
             photo.setPhotoId(Integer.parseInt(ids[i]));
-            photo.setPhotoType(2);
+            photo.setPhotoType(AoxiuConstant.AOXIU_PHOTO_USER_SELECTED);
             photos.add(photo);
         }
         return photoDao.updatePictures(photos);
@@ -276,18 +276,7 @@ public class OrderServiceImpl implements OrderService {
             tempCom.setWaterMarkType(temp.getWatermarkType());
             tempCom.setCustomerId(temp.getUserId());
             Customer customer = customerDao.getCustomerByUserId(temp.getUserId());
-            if (temp.getGetCodeSelected() != null) {              //已经完成修片
-                tempCom.setStatus("已经完成修片");
-            } else if (temp.getGetCode() == null) {                //订单还没创建
-                tempCom.setStatus("还没有上传原片");
-
-            } else {
-                if (customerSelectedPhotos(temp.getOrderId())) {  //正在修片
-                    tempCom.setStatus("正在修片");
-                } else {                                          //客户还没有选择要修的片子
-                    tempCom.setStatus("客户还没有选择要修的片子");
-                }
-            }
+            tempCom.setStatus(AoxiuOrderStatus.orderStatus.get(temp.getOrderStep()));
             tempCom.setCustomerName(customer.getRealName());
             photographerOrderCommons.add(tempCom);
         }
@@ -411,7 +400,7 @@ public class OrderServiceImpl implements OrderService {
                 } else {
                     return null;
                 }
-            } else if (type == AoxiuConstant.AOXIU_PHOTO_SELECTED) {
+            } else if (type == AoxiuConstant.AOXIU_PHOTO_PHOTOGRAPHER_SELECTED) {
                 if (photographerOrder.getGetCodeSelected() != null) {
                     return photographerOrder.getGetCodeSelected();
                 } else {
@@ -426,9 +415,22 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public PhotographersContent getMasterContents(String orderId) {     //TODO 没必要封装
+    public PhotographersContent getMasterContents(String orderId) {     //订单编号
         PhotoContent photoContent = photoContentDao.getOrderMasterContentByOrderId(orderId);
         if (photoContent == null) {
+            return null;
+        }
+        PhotographersContent photographersContent = new PhotographersContent();
+        photographersContent.setId(photoContent.getPhotoContentId());
+        photographersContent.setName(photoContent.getContentName());
+        return photographersContent;
+    }
+
+    @Override
+    public PhotographersContent getMasterContentsByCustomerId(String customerId){  //客户编号
+        PhotographerOrder photographerOrder = photographerOrderDao.getPhotographerOrderByUserId(customerId);
+        PhotoContent photoContent = photoContentDao.getOrderMasterContentByOrderId(photographerOrder.getOrderId() + "");
+        if(photoContent == null){
             return null;
         }
         PhotographersContent photographersContent = new PhotographersContent();
@@ -646,30 +648,36 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     @Transactional
-    public boolean uploadPhotos(String jsonStr) {
-//        PhotoContent photoContent = photoContentDao.getPhotoContentById(contentId);
+    public List<Photo> uploadPhotos(String jsonStr) {
         JSONObject jsonObject = JSONObject.fromObject(jsonStr);
         String contentId = jsonObject.getString("album_id");
+        String type = jsonObject.getString("type");
         JSONArray photoNames = jsonObject.getJSONArray("names");
         if (contentId.equals("")) {//TODO  得新建目录
 //            addNewContent("主目录",)
         }
         List<Photo> photos = new ArrayList<>();
+        PhotoContent photoContent = photoContentDao.getPhotoContentById(contentId);
+        PhotographerOrder photographerOrder = new PhotographerOrder();
+        photographerOrder.setOrderStep(AoxiuOrderStatus.SELECTED_NOT_UPLOADED);
+        photographerOrder.setOrderId(photoContent.getOrderId());
+        photographerOrderDao.updatePhotographerOrder(photographerOrder);
+        int photoType = 1;
+        if("selected".equals(type)){
+            photoType = AoxiuConstant.AOXIU_PHOTO_PHOTOGRAPHER_SELECTED;
+        }else if("unselected".equals(type)){
+            photoType = AoxiuConstant.AOXIU_PHOTO_UNSELECTED;
+        }
         for (int i = 0; i < photoNames.size(); i++) {
             Date date = new Date();
             String tempObject = (String) photoNames.get(i);
-            Photo photo = new Photo(Integer.valueOf(contentId), AoxiuConstant.AOXIU_PHOTO_UNSELECTED, tempObject, null, date, "http://7xis67.com2.z0.glb.qiniucdn.com/");
+            Photo photo = new Photo(Integer.valueOf(contentId), photoType, tempObject, null, date, "http://7xis67.com2.z0.glb.qiniucdn.com/");
             photos.add(photo);
         }
         int count = 0;
         for (int i = 0; i < photos.size(); i++) {
             count += photoDao.insertPhoto(photos.get(i));
         }
-
-        if (count > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return photos;
     }
 }
