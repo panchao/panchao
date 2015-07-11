@@ -1,0 +1,11 @@
+<% for (var i = 0; i < data.length; ++i) { %>
+  <% var photo = data[i]; %>
+    <div class="col-md-6">
+      <img src="<%= photo.src %>" alt="<%= photo.newName %>" />
+      <div class="pull-right">
+        <div>原文件名：<span><%= photo.oldName %></span></div>
+        <div>新文件名：<span><%= photo.newName %></span></div>
+        <div>拍摄日期：<span><%= photo.shootTime %></span></div>
+      </div>
+    </div>
+<% } %>

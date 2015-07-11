@@ -1,0 +1,9 @@
+<% for (var i = 0; i < data.length; ++i) { %>
+<% var info = data[i]; %>
+<tr>
+  <td><%= info.customerName %></td>
+  <td><%= info.createTime %></td>
+  <td><%= info.status %></td>
+  <td><a href="/order/gotoOrderDetail.do?orderId=<%= info.orderId %>">查看</a></td>
+</tr>
+<% } %>

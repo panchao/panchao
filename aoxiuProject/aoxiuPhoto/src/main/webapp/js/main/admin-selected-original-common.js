@@ -34,8 +34,11 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
     var id = $('.breadcrumb > .active').data('url').match(/&album_id=([^&]*)/);
     return id? id[1] : '';
   }
+
   // start it
   var photographerId = $('#photographer').data('photographer').id;
+  var adminPhotoType = $('input.'); // 'selected' or original
+
   console.log('adminPhotoType', adminPhotoType);
   var basicUrl;
   switch (adminPhotoType) {
