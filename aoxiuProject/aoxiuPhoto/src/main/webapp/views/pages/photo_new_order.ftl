@@ -2,15 +2,15 @@
 <html lang="zh-CN">
 <head>
 	<#-- <title>摄影师新增订单</title> -->
-	<#include "../partials/head.ftl">
+	<#include "partials/head.ftl">
   <link rel="stylesheet" href="/css/album.css" />
   <link rel="stylesheet" href="/css/new-order-steps.css" />
 </head>
 
 <body class="container well">
 
-<#include "../partials/header.ftl">
-<#include "../partials/nav.ftl">
+<#include "partials/header.ftl">
+<#include "partials/nav.ftl">
 
 <div class="pull-left op-panel">
   <div id="steps">

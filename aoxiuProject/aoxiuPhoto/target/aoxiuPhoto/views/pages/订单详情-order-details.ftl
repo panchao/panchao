@@ -1,41 +1,16 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <title>评价管理</title>
-	<meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="/css/layout.css" />
+  <#-- 订单详情 -->
+  <#include "../partials/head.ftl">
   <link rel="stylesheet" href="/css/timeline.css" />
   <link rel="stylesheet" href="/css/order-details.css" />
-
 </head>
 
 <body class="container well">
 
-<header class="header-user">
-  <img src="/img/logo.png" />
-
-  <span class="pull-right">
-    <span id="photographer" data-photographer='{"id":"${photographers_id}"}'>XXX</span>，您好<a class="btn btn-warning" href="/users/logout">退出</a><div>
-    </div>
-  </span>
-
-</header>
-
-<nav class="pull-left op-nav">
-  <ul>
-  	<li class="aside-tab-current"><a href="/users/gotoPhotoNewOrder.do?photographers_id=${photographers_id}">新增订单</a></li>
-  	<li><a href="/users/gotoPhotographerHome.do?photographers_id=${photographers_id}">首页</a></li>
-  	<li>客户管理</li>
-  	<li>订单管理</li>
-    <li>评价管理</li>
-  	<li>代金券管理</li>
-  	<li>水印设置</li>
-  	<li>我的资金</li>
-  </ul>
-</nav>
+<#include "../partials/header.ftl">
+<#include "../partials/nav.ftl">
 
 <div class="pull-left op-panel">
   <div class="row row-order">
@@ -47,9 +22,9 @@
       <span class="col-md-12">订单类型：${order.type}</span>
     </div>
     <div class="row-order-inner">
-      <span class="col-md-5">精修张数：<span class="display-label">${order.selectedCount}</span><input class="edit-input" type="number" value="${order.selectedCount}" style="display:none;" />张<button class="btn btn-success edit-btn" data-post-param="selectedCount">修改</button></span>
+      <span class="col-md-5">精修张数：<span class="display-label">${order.selectedCount}</span><input class="edit-input" type="number" value="${order.selectedCount}" style="display:none;" />张<button class="btn btn-success edit-btn" data-post-param="selectedCount">修改</button><span class="alert alert-danger" style="display:none;">修改失败</span></span>
 
-      <span class="col-md-7">额外精修价格：<span class="display-label">${order.extraPrice}</span><input class="edit-input" type="number" value="${order.extraPrice}" style="display:none;" />元/张<button class="btn btn-success edit-btn" data-post-param="extraPrice">修改</button></span>
+      <span class="col-md-7">额外精修价格：<span class="display-label">${order.extraPrice}</span><input class="edit-input" type="number" value="${order.extraPrice}" style="display:none;" />元/张<button class="btn btn-success edit-btn" data-post-param="extraPrice">修改</button><span class="alert alert-danger" style="display:none;">修改失败</span></span>
     </div>
   </div>
   <input type="hidden" id="order-id" value="${order.id}" />

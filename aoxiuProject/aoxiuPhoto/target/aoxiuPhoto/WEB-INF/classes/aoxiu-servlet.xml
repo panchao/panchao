@@ -105,7 +105,7 @@
     <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
         <property name="templateLoaderPaths">
             <list>
-                <value>/ftl/</value>
+                <value>/views/pages/</value>
             </list>
         </property>
         <property name="freemarkerSettings" ref="freemarkerSettingsBean" />

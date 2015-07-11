@@ -1,10 +1,10 @@
-<% photos.forEach(function (photo) { %>
-    <div class="col-md-4 <%= photo.boxClass? photo.boxClass: '' %>">
-      <img src="<%= photo.src %>" width="110" height="95" alt="<%= photo.name %>" data-img='{"id": "<%= photo.id %>"}' />
-      <span class="delete-icon" title="删除该相片">×</span>
-      <div class="pull-right photo-info">
-        <div>名字：<span><%= photo.name %></span></div>
-        <div>拍摄日期：<span class="shootTime"><%= photo.shootTime %></span></div>
-      </div>
-    </div>
+<% data.forEach(function (photo) { %>
+<div class="col-md-4 <%= photo.boxClass? photo.boxClass: '' %>">
+  <img src="<%= photo.src %>" width="110" height="95" alt="<%= photo.name %>" data-img="{&quot;id&quot;: &quot;<%= photo.id %>&quot;}" />
+  <span class="delete-icon" title="删除该相片">×</span>
+  <div class="pull-right photo-info">
+    <div>名字：<span><%= photo.name %></span></div>
+    <div>拍摄日期：<span class="shootTime"><%= photo.shootTime %></span></div>
+  </div>
+</div>
 <% }); %>

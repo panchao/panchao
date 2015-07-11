@@ -214,15 +214,11 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
           .fail(function (jqXHR, textStatus) {
             // do nothing
           })
-<<<<<<< HEAD
-          .done(function (data) {
-              data = data['data'];
-=======
+
           .done(function (result) {
             console.log('result:', result);
               alert(result);
               data = result['data'];
->>>>>>> b517d7872a5c9855c332e37a28fd3f0d9d094f41
               console.log('data:', data);
               $uploading.find('img').each(function (index) {
               var $img = $(this);
@@ -232,12 +228,8 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
               }
 
               $img.data('img').id = photo.photoId;
-<<<<<<< HEAD
                 console.log('photoId:', photo.photoId);
                 $img.siblings('.photo-info').find('.shootTime').text(photo.shootTime);
-=======
-              $img.siblings('.photo-info').find('.shootTime').text(photo.shootTime);
->>>>>>> b517d7872a5c9855c332e37a28fd3f0d9d094f41
             });
           });
 

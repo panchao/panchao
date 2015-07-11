@@ -73,25 +73,6 @@
       'UploadComplete': function() {
         $('#success').show();
 
-<<<<<<< HEAD
-        /*$.post('/uploadfiles', JSON.stringify({
-              album_id: getAlbumId(),
-              names: filenames
-=======
-          $.ajax({
-            url: '/pictures/uploadPictures.do',   //TODO
-            type: 'POST',
-            data: JSON.stringify({
-              //albumName: albumBreadCrumb.$current().text(),
-              // $('#step-photo-upload .breadcrumb .active').text()
-                album_id: getAlbumId(),
-                names: filenames,
-                type:"unselected"
->>>>>>> 4c2c96e2a5a0d93138a258132d6a064279282f3d
-            }),
-                        'json' // 返回数据类型
-                    );*/
-
         $.ajax({
           url: '/pictures/uploadPictures.do', //TODO
           type: 'POST',

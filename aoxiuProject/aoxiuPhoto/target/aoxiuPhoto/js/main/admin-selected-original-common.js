@@ -27,6 +27,8 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
     this.template.update(this.box, msg);
   };
   TemplateController.prototype.append = function (msg) {
+    console.log('msg', msg);
+    console.log(this.template);
     this.$box.append(this.template.render(msg));
   };
 
@@ -34,8 +36,11 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
     var id = $('.breadcrumb > .active').data('url').match(/&album_id=([^&]*)/);
     return id? id[1] : '';
   }
+
   // start it
   var photographerId = $('#photographer').data('photographer').id;
+  var adminPhotoType = $('input.admin-photo-type').val(); // selected or original
+
   console.log('adminPhotoType', adminPhotoType);
   var basicUrl;
   switch (adminPhotoType) {
@@ -53,7 +58,7 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
   var photos = new TemplateController('.photos', '/template/selected-admin.ejs');
   var pager = new Pagination({
     hook: '.my-pager',
-    total: $('.page-box input:hidden').val(),
+    total: $('.total-pages').val(),
     onPageClick: function (event, page) {
       var url = ajaxUrl + page;
       adminPhotoType === 'original' && (url += '&albumId=' + getAlbumId());
@@ -209,8 +214,11 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
           .fail(function (jqXHR, textStatus) {
             // do nothing
           })
-          .done(function (data) {
-              data = data['data'];
+
+          .done(function (result) {
+            console.log('result:', result);
+              alert(result);
+              data = result['data'];
               console.log('data:', data);
               $uploading.find('img').each(function (index) {
               var $img = $(this);

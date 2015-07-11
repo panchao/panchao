@@ -2,14 +2,14 @@
 <html lang="zh-CN">
 <head>
   <#-- 代金券管理 -->
-  <#include "../partials/head.ftl">
+  <#include "partials/head.ftl">
   <link rel="stylesheet" href="/css/coupon-admin.css" />
 </head>
 
 <body class="container well">
 
-  <#include "../partials/header.ftl">
-  <#include "../partials/nav.ftl">
+  <#include "partials/header.ftl">
+  <#include "partials/nav.ftl">
 
   <div class="pull-left op-panel coupon">
 

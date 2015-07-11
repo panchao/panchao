@@ -234,7 +234,7 @@ public class PictureController {
             request.setAttribute("masterContentId",photographersContent.getId());
             request.setAttribute("totalPages",200);
             request.setAttribute("totalPhotos",2000);
-            return "photo-admin";
+            return "admin-selected-original-photos";
         }catch (Exception e){
             logger.error("[getSelectedPictrues] get selected pictures error -> " + e.getMessage());
             return "error";
@@ -261,7 +261,11 @@ public class PictureController {
             request.setAttribute("totalPhotos",paginationInfo.getTotalPage());
             request.setAttribute("title","精修片管理");
             request.setAttribute("masterContentId",photographersContent.getId());
-            return "photo-admin-selected";
+            request.setAttribute("type","selected");
+            request.setAttribute("domain","http://qiniu-plupload.qiniudn.com/");
+            request.setAttribute("uptokenUrl","http://localhost:8080/pictures/getToken?type=3");
+            request.setAttribute("albumId",photographersContent.getId());
+            return "admin-selected-original-photos";
         }catch (Exception e){
             logger.error("[getSelectedPictrues] get selected pictures error -> " + e.getMessage());
             return "error";
