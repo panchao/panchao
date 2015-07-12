@@ -27,8 +27,8 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
     this.template.update(this.box, msg);
   };
   TemplateController.prototype.append = function (msg) {
-    console.log('msg', msg);
-    console.log(this.template);
+    //console.log('msg', msg);
+    //console.log(this.template);
     this.$box.append(this.template.render(msg));
   };
 
@@ -57,16 +57,20 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
   }
 
   var ajaxUrl = basicUrl + '&count=10&page=';
-  var photos = new TemplateController('.photos', '../views/template/selected-admin.ejs');
-  var pager = new Pagination({
-    hook: '.my-pager',
-    total: $('.total-pages').val(),
-    onPageClick: function (event, page) {
-      var url = ajaxUrl + page;
-      adminPhotoType === 'original' && (url += '&albumId=' + getAlbumId());
-      photos.update(url);
-    }
-  });
+  var photos = new TemplateController('.photos', '../views/templates/selected-admin.ejs');
+
+  // 原片没有分页
+  if (adminPhotoType === 'selected') {
+    var pager = new Pagination({
+      hook: '.my-pager',
+      total: $('.total-pages').val(),
+      onPageClick: function (event, page) {
+        var url = ajaxUrl + page;
+        adminPhotoType === 'original' && (url += '&albumId=' + getAlbumId());
+        photos.update(url);
+      }
+    });
+  }
 
   // delete photos
   var tips = {

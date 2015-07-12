@@ -13,3 +13,12 @@
   cursor: pointer;
   font-size: 2em;
 }
+
+.photos .photo-info {
+  width: 60%;
+}
+.photos .photo-info > div {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

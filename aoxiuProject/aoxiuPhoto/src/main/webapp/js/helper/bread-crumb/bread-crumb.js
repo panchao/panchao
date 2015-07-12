@@ -1,6 +1,7 @@
 // require jquery, ejs
 ;(function (window) {
 
+  // 为了适应非require
   function factory($, EJS) {
 
     function BreadCrumb(customerSettings) {
@@ -69,7 +70,7 @@
         this.config.dirs.push({url: url, text: text});
         this._update();
       },
-      // 返回当前 目录的jquery dom
+      // 返回当前目录的jquery DOM
       $current: function () {
         return this.$target.find('.active');
       }
@@ -105,8 +106,14 @@
     });
   } 
   else {
-    legend.helper.BreadCrumb = factory($, EJS);
+    try {
+      legend.helper.BreadCrumb = factory($, EJS);
+    }
+    catch (e) {
+      window.BreadCrumb = factory($, EJS);
+    }
   }
+
 }(window));
 
 

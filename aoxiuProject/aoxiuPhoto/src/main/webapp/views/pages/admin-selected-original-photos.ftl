@@ -29,20 +29,20 @@
     </div>
   </div>
   <div class="photo-box">
-    <#--<#if type == "original">-->
-    <#--<div class="my-breadcrumb"></div>-->
-    <#--<div class="albums">-->
-      <#--<input type="hidden" value="${ mainAlbumId }" />-->
-      <#--<div class="albums">-->
-        <#--<#list album as data.albums>-->
-          <#--<#include ../partials/album.ftl>-->
-        <#--</#list>-->
-      <#--</div>-->
-    <#--</div>-->
-    <#--</#if>-->
+    <#if type == "original">
+    <div class="my-breadcrumb"></div>
+    <div class="albums">
+      <input type="hidden" value="${ mainAlbumId }" />
+      <div class="albums">
+        <#list albums as album>
+          <#include partials/album.ftl>
+        </#list>
+      </div>
+    </div>
+    </#if>
 
     <div class="photos container-fluid clearfix">
-      <#list data as photo>
+      <#list photos as photo>
         <div class="col-md-4">
           <img src="${ photo.photoSrc }/${photo.photoNameOld}" width="110" height="95" alt="${ photo.photoNameOld }" data-img="{&quot;id&quot;: &quot;${ photo.photoId }&quot;}" />
           <span class="delete-icon" title="删除该相片">×</span>
@@ -55,10 +55,14 @@
     </div>
   </div>
 
+  <!-- 只有精修片有分页 -->
+  <#if type == "selected">
   <div class="text-center page-box">
     <input class="total-pages" type="hidden" value="${ totalPages }"/>
     <div class="my-pager"></div>
   </div>
+  </#if>
+
 </div>
 
 <script src="/js/libs/requirejs/2.1.18/require.min.js"></script>

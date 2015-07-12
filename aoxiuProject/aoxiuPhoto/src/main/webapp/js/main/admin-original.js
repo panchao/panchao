@@ -1,20 +1,23 @@
 require(['breadCrumb', 'ejs'], function(BreadCrumb, EJS) {
   var photographerId = $('#photographer').data('photographer').id;
-  var albumAjaxUrl = '/photographer/'+ photographerId +'/original&albumId=';
-  var $photos = $('.photo-box .photos');
+  var customerId = $('input.customer-id').val();
+  //var albumAjaxUrl = '/photographer/'+ photographerId +'/original&albumId=';
+  // 获取相片和目录
+  var basicUrl = '/pictures/originalManagerJson.do?count=10&photographerId=' + photographerId + "&customerId=" + customerId + '&albumId=';
 
   function TemplateController(hook, templateUrl) {
     this.$box = $(hook);
     this.box = this.$box[0];
     this.template = new EJS({ url: templateUrl });
   }
-  TemplateController.prototype.update = function (ajaxUrl, callback) {
+  //TemplateController.cache = ;
+  TemplateController.prototype.updateByUrl = function (ajaxUrl, callback) {
     var self = this;
 
     $.get(ajaxUrl)
       .done(function (msg) {
         if (msg.retCode == 200) {
-          self._update(msg.data);
+          self.updateByResult(msg);
           callback && callback(msg.totalPages);
         }
         else {
@@ -25,32 +28,52 @@ require(['breadCrumb', 'ejs'], function(BreadCrumb, EJS) {
         console.error('failed GET ' + ajaxUrl);
       });
   };
-  TemplateController.prototype._update = function (msg) {
+  TemplateController.prototype.updateByResult = function (msg) {
     this.template.update(this.box, msg);
   };
 
-  function update (result) {
-    album.update
-  }
+
 
   // start it
-  var album = new TemplateController('.albums', '/template/album.ejs');
-  var photo = new TemplateController('.photos', '/template/photo.ejs');
-  var pager = new Pagination({
-    hook: '.my-pager'
-  });
-  breadCrumb = new BreadCrumb({
+  var albumController = new TemplateController('.albums', '/views-node/templates/album.ejs');
+  var photoController = new TemplateController('.photos', '/views-node/templates/photo.ejs');
+  // 原片没有分页
+  // var pager = new Pagination({
+  //   hook: '.my-pager',
+  //   total: $('.total-pages').val(),
+  //   onPageClick: function (event, page) {
+  //     var url = ajaxUrl + '&albumId=' + getAlbumId() + '&page=' + page;
+  //     albumController.update(url);
+  //     photoController.update(url);
+  //   }
+  // });
+  function updateByResult(result) {
+    console.log(result);
+    if (result.retCode == '200') {
+      result.albums && albumController.updateByResult(result);
+      result.photos && photoController.updateByResult(result);
+    }
+    else {
+      console.error('获取图片和目录返回数据的retCode != 200');
+    }
+    
+  }
+  var breadCrumb = new BreadCrumb({
     hook: '.my-breadcrumb',
-    ajax: true,
     dirs: [{
-      url: albumAjaxUrl + $('.album-box input').val(),
+      url: basicUrl + $('.album-box input').val(),
       text: '主相册'
     }],
-    callback: update;
+    callback: updateByResult
   });
 
-  $('.photo-box .albums').on('click', 'a', function () {
-    updateAlbum(albumAjaxUrl + $(this).data('album').id);
+  $('.albums').on('click', 'a', function () {
+      // updateAlbum(basicUrl + $(this).data('album').id);
+      var url = basicUrl + $(this).data('album').id;
+      albumController.updateByUrl(url);
+      photoController.updateByUrl(url);
+
+      breadCrumb.append(url + '&page=1', this.title);
   });
 
 });
