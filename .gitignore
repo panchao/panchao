@@ -30,3 +30,4 @@ server.js
 views-node
 aoxiuProject/aoxiuPhoto/src/main/config.js
 test
+*.class

@@ -17,22 +17,6 @@
 <div class="pull-left op-panel">
   <input class="admin-photo-type" type="hidden" value="${ type }" />
 
-<<<<<<< HEAD
-  <#--<#if type == "original">-->
-  <#--<div class="my-breadcrumb"></div>-->
-  <#--<div class="album-box">-->
-    <#--<input type="hidden" value="${ mainAlbumId }" />-->
-    <#--<div class="albums">-->
-      <#--<#list album as data.albums>-->
-        <#--<#include "partials/album.ftl">-->
-      <#--</#list>-->
-    <#--</div>-->
-  <#--</div>-->
-  <#--</#if>-->
-=======
-
->>>>>>> ad316cb92b7aa95aa4d1f2389f0502f086b7f5c1
-
   <div class="row">
     <div class="col-md-6">共${ totalPhotos }张</div>
     <div class="col-md-6">
