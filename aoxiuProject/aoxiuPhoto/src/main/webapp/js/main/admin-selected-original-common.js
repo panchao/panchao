@@ -12,7 +12,7 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
     $.get(ajaxUrl)
       .done(function (msg) {
         if (msg.retCode == 200) {
-          self._update(msg.data);
+          self._update(msg);
           callback && callback(msg.totalPages);
         }
         else {
@@ -40,22 +40,24 @@ require(['jquery', 'ejs', 'pagination', 'qiniu'], function ($, EJS, Pagination, 
   // start it
   var photographerId = $('#photographer').data('photographer').id;
   var adminPhotoType = $('input.admin-photo-type').val(); // selected or original
+  var customerId = $('input.customer-id').val();
+
 
   console.log('adminPhotoType', adminPhotoType);
   var basicUrl;
   switch (adminPhotoType) {
     case 'original': 
-      basicUrl = '/pictures/selectedManagerJson.do?photographerId=' + photographerId;
+      basicUrl = '/pictures/selectedManagerJson.do?photographerId=' + photographerId + "&customerId=" + customerId;
       break;
     case 'selected': 
-      basicUrl = '/pictures/selectedManagerJson.do?photographerId=' + photographerId;
+      basicUrl = '/pictures/selectedManagerJson.do?photographerId=' + photographerId + "&customerId=" + customerId;
       break;
     default:
       throw new Error('只能是精修片或者原片管理');
   }
 
-  var ajaxUrl = basicUrl + '&count=4&page=';
-  var photos = new TemplateController('.photos', '/template/selected-admin.ejs');
+  var ajaxUrl = basicUrl + '&count=10&page=';
+  var photos = new TemplateController('.photos', '../views/template/selected-admin.ejs');
   var pager = new Pagination({
     hook: '.my-pager',
     total: $('.total-pages').val(),

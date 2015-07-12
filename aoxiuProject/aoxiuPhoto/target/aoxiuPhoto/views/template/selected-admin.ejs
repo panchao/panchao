@@ -1,5 +1,9 @@
 <% data.forEach(function (photo) { %>
 <div class="col-md-4 <%= photo.boxClass? photo.boxClass: '' %>">
-  <%- include ./photo.ejs %>
+  <img src="<%= photo.photoSrc + "/" + photo.photoNameOld %>" width="110" height="95" alt="<%= photo.photoNameOld %>" data-img="{&quot;id&quot;: &quot;<%= photo.photoId %>&quot;}" />
+  <span class="delete-icon" title="删除该相片">×</span>
+  <div class="pull-right photo-info">
+    <div>名称：<%= photo.photoNameOld %></div>
+  </div>
 </div>
 <% }); %>

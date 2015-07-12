@@ -24,6 +24,8 @@
       <input type="hidden" class="domain" value="${ domain }">
       <input type="hidden" class="uptoken-url" value="${ uptokenUrl }">
       <input type="hidden" class="album-id" value="${ albumId }">
+        <input type="hidden" class="customer-id" value="${ customerId }">
+
     </div>
   </div>
   <div class="photo-box">
